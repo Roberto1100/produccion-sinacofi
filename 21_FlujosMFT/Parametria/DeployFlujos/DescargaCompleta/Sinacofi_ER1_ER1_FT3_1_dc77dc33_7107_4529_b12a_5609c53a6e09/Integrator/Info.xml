@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Export>
+   <Specification-Title>Synchrony Integrator Export file</Specification-Title>
+   <Component-Vendor>Axway Software</Component-Vendor>
+   <Creation-Date>2024-09-12T17:49:57.000Z</Creation-Date>
+   <Specification-Version>
+      <![CDATA[26.10.0-1]]>
+   </Specification-Version>
+   <Component-Name>MAPSERVICE</Component-Name>
+   <Component-Version>3.1.2</Component-Version>
+   <Component-Host-Name>DESKTOP-FSE9076</Component-Host-Name>
+   <Audit-Id>dc77dc33-7107-4529-b12a-5609c53a6e09</Audit-Id>
+   <Action-Type>Export-Object-Set</Action-Type>
+   <Origin>Map-Designer</Origin>
+   <UsedNamespaces>true</UsedNamespaces>
+</Export>

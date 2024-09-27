@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 16:23:50 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P34_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P34_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-843794796" elementPath="/Datos/CGB/">
+         <dmlExpression><![CDATA[%totalCGB:=0;
+loop on \Details {
+	%totalCGB:=%totalCGB + convertToI( getSubString(this\Contenido, 4, 14))
+};
+%totalCGB]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2038866787" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

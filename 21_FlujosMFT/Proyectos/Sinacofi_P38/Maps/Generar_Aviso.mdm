@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="3f31b90d-951f-41e4-bc66-8df2bd4f307e">
+   <signature appVersion="3.1.2" lastUpdatedOn="27/03/2024 15:02:33 -0300"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Mensajeria/Aviso.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P38_Control_Datos.bdoc" alias="in5"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="2079837718" elementPath="/Fin/Fin_Mensaje/">
+         <dmlExpression><![CDATA["FIN_MENSAJE"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1124200601" elementPath="/Inicio/Mensaje_Resultado/">
+         <dmlExpression><![CDATA["MENSAJE_RESULTADO"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1889440342" elementPath="/Details/NA_y_Originador/">
+         <dmlExpression><![CDATA[padStringRight(getSubString(in5:\Details\Detalles, 1, 20), 20, " ")&padStringRight(getSubString(in5:\Details\Detalles, 21, 20), 20, " ")]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/07/2024 16:23:43 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P14_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P14_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1855361394" elementPath="/PA6/Linea/">
+         <dmlExpression><![CDATA["01"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-352978166" elementPath="/PA6/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1309664384" elementPath="/PA6/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-709569153" elementPath="/PA6/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 19, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1027852010" elementPath="/PAO/Linea/">
+         <dmlExpression><![CDATA["02"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1180239880" elementPath="/PAP/Linea/">
+         <dmlExpression><![CDATA["03"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-414565500" elementPath="/PAO/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN0, 5,  index(in4:\Caratula\PN0, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN0, 5,  index(in4:\Caratula\PN0, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN0, 5,  index(in4:\Caratula\PN0, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-935261054" elementPath="/PAP/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN1, 5,  index(in4:\Caratula\PN1, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN1, 5,  index(in4:\Caratula\PN1, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN1, 5,  index(in4:\Caratula\PN1, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-381571093" elementPath="/PAP/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1252030151" elementPath="/PAO/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1744489578" elementPath="/PAP/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2097080026" elementPath="/PAO/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1368521724" elementPath="/AJD/Linea/">
+         <dmlExpression><![CDATA["04"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1748748810" elementPath="/AJX/Linea/">
+         <dmlExpression><![CDATA["05"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="967509001" elementPath="/AJD/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-675814252" elementPath="/AJX/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1110210936" elementPath="/AJD/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="916539669" elementPath="/AJX/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1758686470" elementPath="/AJD/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN2, 5,  index(in4:\Caratula\PN2, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN2, 5,  index(in4:\Caratula\PN2, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN2, 5,  index(in4:\Caratula\PN2, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1214030775" elementPath="/MOE/Linea/">
+         <dmlExpression><![CDATA["06"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1870526689" elementPath="/MOE/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1736806796" elementPath="/MOE/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-665764372" elementPath="/MOE/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN4, 5,  index(in4:\Caratula\PN4, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN4, 5,  index(in4:\Caratula\PN4, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN4, 5,  index(in4:\Caratula\PN4, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1139931791" elementPath="/MOD/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN3, 5,  index(in4:\Caratula\PN3, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN3, 5,  index(in4:\Caratula\PN3, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN3, 5,  index(in4:\Caratula\PN3, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="753738133" elementPath="/PN5/Linea/">
+         <dmlExpression><![CDATA["07"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-401394765" elementPath="/PN6/Linea/">
+         <dmlExpression><![CDATA["08"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="875411440" elementPath="/PN5/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1015269961" elementPath="/PN6/ValorDecimal/">
+         <dmlExpression><![CDATA["00"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1505068009" elementPath="/PN5/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="16832972" elementPath="/PN6/SignoCampo/">
+         <dmlExpression><![CDATA[%Sinacofi_P14.signo]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1449288986" elementPath="/PN6/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN6, 5,  index(in4:\Caratula\PN6, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN6, 5,  index(in4:\Caratula\PN6, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN6, 5,  index(in4:\Caratula\PN6, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-171849618" elementPath="/PN5/ValorCampo/">
+         <dmlExpression><![CDATA[if ( convertToI(getSubString(in4:\Caratula\PN5, 5,  index(in4:\Caratula\PN5, "}") - 5))  < 0) then {
+
+	%Sinacofi_P14.signo:= "-";
+
+	padStringLeft(convertToI(getSubString(in4:\Caratula\PN5, 5,  index(in4:\Caratula\PN5, "}") - 5))* -1, 19, "0")
+
+} else {
+
+	%Sinacofi_P14.signo:= "+";
+
+	padStringLeft(getSubString(in4:\Caratula\PN5, 5,  index(in4:\Caratula\PN5, "}") - 5), 19, "0")
+
+}]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ObjectDependencies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ObjectDependencies.xsd">
+   <RootObject fileName="BusinessDocument_1.xml" id="a91daccd-1073-4c31-9ac1-880c96b27f33" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion" type="BusinessDocument"/>
+   <RootObject fileName="BusinessDocument_2.xml" id="2fda2dca-560f-4157-817f-52b4a8ce9afe" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement" type="BusinessDocument"/>
+   <RootObject fileName="CustomFunctions.xml" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.InsertMovTBL" type="CustomFunction"/>
+   <RootObject fileName="CustomFunctions.xml" id="0a4f50b2-588f-47ea-a707-8b6fee4f825d" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetFlujoByCorrelativo" type="CustomFunction"/>
+   <RootObject fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+   <RootObject fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo" type="CustomFunction"/>
+   <RootObject fileName="CustomFunctions.xml" id="bd166ebc-16c7-42e3-bd64-4f419dc5847b" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaDestinoByCorrelativo" type="CustomFunction"/>
+   <RootObject fileName="MapBroker_1.xml" id="e032af9f-815a-45ae-b41b-4cb076743e0e" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Main_Block_Insert_Movement_Flow1" type="MapBroker">
+      <Object fileName="CustomFunctions.xml" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.InsertMovTBL" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="0a4f50b2-588f-47ea-a707-8b6fee4f825d" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetFlujoByCorrelativo" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo" type="CustomFunction"/>
+      <Object id="d2631074-70b5-4874-bad3-ce7d93ac37a6" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CrearNotificacion" type="MappingRule">
+         <Object fileName="BusinessDocument_1.xml" id="a91daccd-1073-4c31-9ac1-880c96b27f33" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion" type="BusinessDocument"/>
+         <Object fileName="BusinessDocument_2.xml" id="2fda2dca-560f-4157-817f-52b4a8ce9afe" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement" type="BusinessDocument"/>
+         <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+         <Object fileName="CustomFunctions.xml" id="bd166ebc-16c7-42e3-bd64-4f419dc5847b" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaDestinoByCorrelativo" type="CustomFunction"/>
+         <Object fileName="Variables.xml" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" type="Variable"/>
+      </Object>
+      <Object fileName="Variables.xml" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" type="Variable"/>
+      <Object fileName="Variables.xml" id="2e668824-656d-4149-a0eb-7f421d3aa3aa" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CodEstado" type="Variable"/>
+      <Object fileName="Variables.xml" id="906ab3bd-1eeb-40f8-8cb3-25bfc9351a09" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movimiento" type="Variable"/>
+      <Object fileName="Variables.xml" id="40fb5a29-99ed-4212-ba03-789d0842bae2" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.NombreArchivo" type="Variable"/>
+      <Object fileName="Variables.xml" id="024e037a-7845-49a8-9f09-f06b14f58d53" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Casilla" type="Variable"/>
+   </RootObject>
+   <RootObject fileName="MapStage_1.xml" id="eacd2fec-2556-4045-bd20-1ce3a78b05c1" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow" type="MapStage">
+      <Object fileName="BusinessDocument_1.xml" id="a91daccd-1073-4c31-9ac1-880c96b27f33" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion" type="BusinessDocument"/>
+      <Object fileName="BusinessDocument_2.xml" id="2fda2dca-560f-4157-817f-52b4a8ce9afe" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement" type="BusinessDocument"/>
+      <Object fileName="CustomFunctions.xml" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.InsertMovTBL" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="0a4f50b2-588f-47ea-a707-8b6fee4f825d" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetFlujoByCorrelativo" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+      <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo" type="CustomFunction"/>
+      <Object fileName="MapBroker_1.xml" id="e032af9f-815a-45ae-b41b-4cb076743e0e" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Main_Block_Insert_Movement_Flow1" type="MapBroker">
+         <Object fileName="CustomFunctions.xml" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.InsertMovTBL" type="CustomFunction"/>
+         <Object fileName="CustomFunctions.xml" id="0a4f50b2-588f-47ea-a707-8b6fee4f825d" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetFlujoByCorrelativo" type="CustomFunction"/>
+         <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+         <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo" type="CustomFunction"/>
+         <Object id="d2631074-70b5-4874-bad3-ce7d93ac37a6" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CrearNotificacion" type="MappingRule">
+            <Object fileName="BusinessDocument_1.xml" id="a91daccd-1073-4c31-9ac1-880c96b27f33" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion" type="BusinessDocument"/>
+            <Object fileName="BusinessDocument_2.xml" id="2fda2dca-560f-4157-817f-52b4a8ce9afe" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement" type="BusinessDocument"/>
+            <Object fileName="CustomFunctions.xml" id="3520b20f-a53c-432a-9504-30082bad7d9f" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" type="CustomFunction"/>
+            <Object fileName="CustomFunctions.xml" id="bd166ebc-16c7-42e3-bd64-4f419dc5847b" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaDestinoByCorrelativo" type="CustomFunction"/>
+            <Object fileName="Variables.xml" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" type="Variable"/>
+         </Object>
+         <Object fileName="Variables.xml" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" type="Variable"/>
+         <Object fileName="Variables.xml" id="2e668824-656d-4149-a0eb-7f421d3aa3aa" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CodEstado" type="Variable"/>
+         <Object fileName="Variables.xml" id="906ab3bd-1eeb-40f8-8cb3-25bfc9351a09" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movimiento" type="Variable"/>
+         <Object fileName="Variables.xml" id="40fb5a29-99ed-4212-ba03-789d0842bae2" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.NombreArchivo" type="Variable"/>
+         <Object fileName="Variables.xml" id="024e037a-7845-49a8-9f09-f06b14f58d53" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Casilla" type="Variable"/>
+      </Object>
+      <Object fileName="Variables.xml" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" type="Variable"/>
+      <Object fileName="Variables.xml" id="2e668824-656d-4149-a0eb-7f421d3aa3aa" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CodEstado" type="Variable"/>
+      <Object fileName="Variables.xml" id="906ab3bd-1eeb-40f8-8cb3-25bfc9351a09" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movimiento" type="Variable"/>
+      <Object fileName="Variables.xml" id="40fb5a29-99ed-4212-ba03-789d0842bae2" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.NombreArchivo" type="Variable"/>
+      <Object fileName="Variables.xml" id="024e037a-7845-49a8-9f09-f06b14f58d53" lastModify="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Casilla" type="Variable"/>
+   </RootObject>
+</ObjectDependencies>

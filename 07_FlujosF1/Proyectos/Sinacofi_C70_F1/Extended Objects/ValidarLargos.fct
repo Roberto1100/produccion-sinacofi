@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="e6f17a8c-444b-4C70-8406-0b9add072ac7">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_VALIDARLARGOCAMPOS(#COD_MSG#, #CAMPOS_CONCATENADOS#, #VC#)  from dual ]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="19/02/2024 17:35:36 -0300"/>
+   <parameters>
+      <parameter dmlClass="I" name="COD_MSG" description="label param0"/>
+      <parameter dmlClass="S" name="CAMPOS_CONCATENADOS" description="label param1"/>
+      <parameter dmlClass="S" name="VC" description="label param2"/>
+   </parameters>
+</customFunction>

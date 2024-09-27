@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 17:19:21 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P22_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P22_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%total_PBH:= 0;
+%total_PBI:= 0;
+%total_PBK_B:= 0;
+%total_PBK:= 0;
+loop on \Details {
+	if( getSubString(this\Contenido, 1,3) = "160" or getSubString(this\Contenido, 1,3) = "240" ) then
+	{
+		%total_PBH:=%total_PBH + convertToI(getSubString(this\Contenido, 4, 8));
+		%total_PBI:=%total_PBI + convertToI(getSubString(this\Contenido, 12, 14))
+	};
+	if( getSubString(this\Contenido, 1,3) = "120" or getSubString(this\Contenido, 1,3) = "210" ) then
+	{
+		%total_PBK:=%total_PBK + convertToI(getSubString(this\Contenido, 26, 8));
+		%total_PBK_B:=%total_PBK_B + convertToI(getSubString(this\Contenido, 34, 14))
+	}
+};
+%total_PBH]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/ID8/">
+         <dmlExpression><![CDATA[%total_PBI]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%total_PBK]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[%total_PBK_B]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1158686349" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

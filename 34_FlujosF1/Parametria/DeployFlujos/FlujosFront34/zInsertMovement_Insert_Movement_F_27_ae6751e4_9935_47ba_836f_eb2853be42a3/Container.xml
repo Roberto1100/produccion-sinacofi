@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ae6751e4-9935-47ba-836f-eb2853be42a3" name="InsertMovement_Insert_Movement_F" version="27" xsi:noNamespaceSchemaLocation="Container.xsd">
+   <longDescription> </longDescription>
+   <generatedBy/>
+   <generationDate>2024-09-06T20:30:41.000Z</generationDate>
+   <shortDescription/>
+   <Contents>
+      <Product name="Integrator" version="3.7.0"/>
+      <Product name="MapDesigner" version="2.5.0"/>
+   </Contents>
+</Container>

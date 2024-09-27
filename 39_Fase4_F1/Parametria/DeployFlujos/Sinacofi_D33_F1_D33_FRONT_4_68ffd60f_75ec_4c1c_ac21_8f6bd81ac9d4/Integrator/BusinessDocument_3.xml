@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BusinessDocuments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BusinessDocuments.xsd">
+   <BusinessDocument businessDocumentType="Inhouse" dmlCompatibility="2.1" encoding="iso8859" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" label="" lastModified="2024-08-13T16:26:37.000Z" name="MAPSERVICE_Sinacofi_D33_F1_D33_FRONT::MAPSERVICE.Sinacofi_D33_F1\Salida.D33_Caratula_Salida" xmlVersion="1.0">
+      <Configuration>
+         <decimalSeparator>true</decimalSeparator>
+         <keepPresenceOfPlusSign>false</keepPresenceOfPlusSign>
+         <keepPresenceOfDecimalSeparator>true</keepPresenceOfDecimalSeparator>
+         <keepInputNumberOfFractionDigits>true</keepInputNumberOfFractionDigits>
+         <keepInputNumberOfDateDigits>true</keepInputNumberOfDateDigits>
+         <keepPresenceOfIntegerPlusSign>false</keepPresenceOfIntegerPlusSign>
+      </Configuration>
+      <Properties>
+         <Property name="enableFixedFieldTruncation" value="false"/>
+         <Property name="realFormatBehavior" value="false"/>
+         <Property name="truncate" value="false"/>
+         <Property name="trim" value="none"/>
+         <Property name="decimalChar"/>
+         <Property name="escapeChar"/>
+         <Property name="closeQuote"/>
+         <Property name="openQuote"/>
+         <Property name="leafElmtDelimiterValue"/>
+         <Property name="leafElmtDelimiterType" value="FIXED"/>
+         <Property name="parentElmtDelimiterValue"/>
+         <Property name="parentElmtDelimiterType" value="FIXED"/>
+      </Properties>
+      <Elements>
+         <ParentElement cargoImpEndSepMandatory="false" cargoImpPreSepMandatory="false" delimiterType="FIXED" delimiterValue="" elementType="InhouseParent" label="" maxCard="1" minCard="1" name="Datos" order="1" swiftErrorCode="" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="8" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="34" order="2" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="PA1" order="3" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXR1" order="4" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXR2" order="5" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXR3" order="6" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZR1" order="7" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZR2" order="8" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZR3" order="9" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXS1" order="10" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXS2" order="11" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXS3" order="12" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZS1" order="13" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZS2" order="14" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZS3" order="15" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXT1" order="16" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXT2" order="17" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXT3" order="18" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZT1" order="19" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZT2" order="20" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZT3" order="21" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXU1" order="22" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXU2" order="23" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXU3" order="24" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZU1" order="25" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZU2" order="26" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZU3" order="27" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXV1" order="28" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXV2" order="29" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXV3" order="30" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZV1" order="31" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZV2" order="32" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZV3" order="33" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXW1" order="34" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXW2" order="35" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIXW3" order="36" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZW1" order="37" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZW2" order="38" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="19" definitionType="Length" delimiterType="FIXED" delimiterValue="" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="1" name="AIZW3" order="39" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="false" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <Facet alternativeDelimiterValue=""/>
+         </ParentElement>
+      </Elements>
+      <CheckConstraints/>
+   </BusinessDocument>
+</BusinessDocuments>

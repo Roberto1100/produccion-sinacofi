@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CustomFunctions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CustomFunctions.xsd">
+   <CustomFunction dmlCompatibility="2.1" id="5e0e28f3-aa92-4c9e-92b4-fc75fadb3a3e" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.GetLargoRegistroByTD" xmlVersion="1.0">
+      <DmlClassName>Integer</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="TD"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_BUSCAR_LARGO_REGISTRO (#TD#)  from dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="53671eb6-d536-4a07-b926-d740272e8aa4" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.InsertErrorTBL" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+         <Param DmlClassName="String" label="label param1" name="codigo"/>
+         <Param DmlClassName="String" label="label param2" name="detalle"/>
+         <Param DmlClassName="String" label="label param3" name="fecha"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CARGAERROR (#correlativo#, #codigo#, #detalle#, #fecha#)  from dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="19523725-d875-4bdc-8be7-3783b7bcfb45" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.GetEntidadByCasilla" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="casilla"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_OBTENER_CODIGO_INST (#casilla#)  from dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.InsertMovTBL" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+         <Param DmlClassName="String" label="label param1" name="archivoSalida"/>
+         <Param DmlClassName="Integer" label="label param2" name="registros"/>
+         <Param DmlClassName="String" label="label param3" name="destino"/>
+         <Param DmlClassName="String" label="label param4" name="estado"/>
+         <Param DmlClassName="String" label="label param5" name="fecha"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CARGAMOVIMIENTO (#correlativo#, #archivoSalida#, #registros#,#destino#,#estado#,#fecha#)  from dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="33471ac7-5872-4709-b75a-0fc814d91ab6" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.ValidarEstructuraCAR" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+         <Param DmlClassName="String" label="label param1" name="campos"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_VALIDAR_ESTRUCTURA_F1(#correlativo#, #campos#) FROM Dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="a7e635c7-52a3-4538-b80d-3db58897c988" label="" lastModified="2024-07-31T19:01:44.000Z" name="MAPSERVICE.Sinacofi_R01_F1.CargarCampos" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="CORRELATIVO"/>
+         <Param DmlClassName="String" label="label param1" name="VAL_CON"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_CARGACAMPOSCALCULADOS(#CORRELATIVO#, #VAL_CON#) FROM DUAL
+</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+</CustomFunctions>

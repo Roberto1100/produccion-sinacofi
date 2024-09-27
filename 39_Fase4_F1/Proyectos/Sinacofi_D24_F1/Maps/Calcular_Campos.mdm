@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="04/06/2024 16:38:29 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D24_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D24_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1695292856" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1169139623" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/LS9/">
+         <dmlExpression><![CDATA[%Total_LSF:= 0;
+%Total_LSH:= 0;
+%Total_LSJ:=0;
+loop on \Details  {
+	%Total_LSF:= %Total_LSF + convertToI(getSubString(this\Contenido, 163, 14));
+	%Total_LSH:= %Total_LSH + convertToI(getSubString(this\Contenido, 191, 14));
+	%Total_LSJ:= %Total_LSJ + convertToI(getSubString(this\Contenido, 219, 14))
+	
+};
+%Total_LSF]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1469098293" elementPath="/Datos/LSH/">
+         <dmlExpression><![CDATA[%Total_LSH]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="897165447" elementPath="/Datos/LSJ/">
+         <dmlExpression><![CDATA[%Total_LSJ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

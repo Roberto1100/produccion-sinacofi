@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="15/05/2024 11:03:05 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/R08_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/R08_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1855361394" elementPath="/PA6/Linea/">
+         <dmlExpression><![CDATA["001"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-352978166" elementPath="/PA6/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1309664384" elementPath="/PA6/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-709569153" elementPath="/PA6/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1307625935" elementPath="/IDC/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1034507648" elementPath="/IDD/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1659203522" elementPath="/IDE/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-991607181" elementPath="/IDE/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1275844572" elementPath="/IDC/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-343048506" elementPath="/IDD/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-682224796" elementPath="/IDC/Linea/">
+         <dmlExpression><![CDATA["002"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1540369229" elementPath="/IDD/Linea/">
+         <dmlExpression><![CDATA["003"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-481047905" elementPath="/IDE/Linea/">
+         <dmlExpression><![CDATA["004"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1251440196" elementPath="/IDC/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDC, 5,  index(in4:\Caratula\IDC, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="510474420" elementPath="/IDD/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDD, 5,  index(in4:\Caratula\IDD, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1104702549" elementPath="/IDE/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDE, 5,  index(in4:\Caratula\IDE, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

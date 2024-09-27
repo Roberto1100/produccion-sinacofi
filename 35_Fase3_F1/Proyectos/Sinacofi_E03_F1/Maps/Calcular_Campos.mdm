@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="30/05/2024 11:44:37 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/E03_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/E03_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1953989469" elementPath="/Datos/EF0/">
+         <dmlExpression><![CDATA[%totalEF6:= 0;
+%totalEF8:=0;
+%totalEF9:=0;
+loop on \Details {
+        %totalEF6:= %totalEF6 + convertToI(getSubString(this\Contenido, 161, 14));
+        
+        %totalEF8:= %totalEF8 + convertToI(getSubString(this\Contenido, 175,14));
+ 
+        %totalEF9:= %totalEF9 + convertToI(getSubString(this\Contenido, 189,14))
+};
+%totalEF6
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/EF1/">
+         <dmlExpression><![CDATA[%totalEF8]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="823981968" elementPath="/Datos/EF2/">
+         <dmlExpression><![CDATA[%totalEF9]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="367019376" elementPath="/Datos/EE1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

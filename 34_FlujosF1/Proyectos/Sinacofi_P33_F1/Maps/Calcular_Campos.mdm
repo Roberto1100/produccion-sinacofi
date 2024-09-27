@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 17:50:19 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P33_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P33_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/PA2/">
+         <dmlExpression><![CDATA[%totalCG1:= 0;
+%totalCG1_B:= 0;
+%totalCG3:=0;
+%totalCG3_B:=0;
+%totalCG6:=0;
+%totalCG8:=0;
+%totalCG9:=0;
+%totalCGA:=0;
+loop on \Details {
+ if(getSubString(this\Contenido, 2, 1) = "1" )
+    then{
+        %totalCG1:= %totalCG1 + convertToI(getSubString(this\Contenido, 3, 8))
+    };
+ if(getSubString(this\Contenido, 2, 1) = "1" )
+    then{
+        %totalCG1_B:= %totalCG1_B + convertToI(getSubString(this\Contenido, 11,14))
+    };
+ if(getSubString(this\Contenido, 2, 1) = "2" )
+    then{
+        %totalCG3:= %totalCG3 + convertToI(getSubString(this\Contenido, 3,8))
+    };
+  if(getSubString(this\Contenido, 2, 1) = "2" )
+    then{
+        %totalCG3_B:= %totalCG3_B + convertToI(getSubString(this\Contenido, 11,14))
+    };
+   if(getSubString(this\Contenido, 2, 1) = "3" )
+    then{
+        %totalCG6:= %totalCG6 + convertToI(getSubString(this\Contenido, 3,8))
+    };
+    if(getSubString(this\Contenido, 2, 1) = "3" )
+    then{
+        %totalCG8:= %totalCG8 + convertToI(getSubString(this\Contenido, 11,14))
+    };
+   if(getSubString(this\Contenido, 2, 1) = "4" )
+    then{
+        %totalCG9:= %totalCG9 + convertToI(getSubString(this\Contenido, 3,8))
+    };
+     if(getSubString(this\Contenido, 2, 1) = "4" )
+    then{
+        %totalCGA:= %totalCGA + convertToI(getSubString(this\Contenido, 11,14))
+    }
+};
+%totalCG1
+
+
+    ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/CG1_B/">
+         <dmlExpression><![CDATA[%totalCG1_B]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/CG3/">
+         <dmlExpression><![CDATA[%totalCG3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="27673146" elementPath="/Datos/CG3_B/">
+         <dmlExpression><![CDATA[%totalCG3_B]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1649176928" elementPath="/Datos/CG6/">
+         <dmlExpression><![CDATA[%totalCG6]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1526392659" elementPath="/Datos/CG8/">
+         <dmlExpression><![CDATA[%totalCG8]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1312437522" elementPath="/Datos/CG9/">
+         <dmlExpression><![CDATA[%totalCG9]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1872572244" elementPath="/Datos/CGA/">
+         <dmlExpression><![CDATA[%totalCGA]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="112232276" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString(in:\Header\Datos,7,6  )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

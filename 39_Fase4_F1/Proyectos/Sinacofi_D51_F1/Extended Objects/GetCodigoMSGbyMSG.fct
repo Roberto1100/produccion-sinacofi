@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="e3e0bd91-c8d6-41af-82d0-daa20a3904cc">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_VALIDA_CODIGO_MSG (#MSG_CAR#,#T_DOC#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="19/04/2024 12:59:34 -0400"/>
+   <parameters>
+      <parameter dmlClass="S" name="MSG_CAR" description="label param0"/>
+   </parameters>
+</customFunction>

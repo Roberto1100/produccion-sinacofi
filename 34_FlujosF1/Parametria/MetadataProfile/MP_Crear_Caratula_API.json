@@ -1,0 +1,35 @@
+{
+  "username" : "lalcayaga",
+  "timestamp" : 1725657436179,
+  "objtype" : "metadata-profiles",
+  "encryptPassword" : true,
+  "userExportedData" : false,
+  "content" : {
+  "enabled" : true,
+  "service" : "Service_Crear_Caratula_API",
+  "outputs" : [ {
+    "@class" : "DeliverToApplication",
+    "outputName" : "SalidaOK",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  } ],
+  "criteria" : [ {
+    "metadata" : "Trading Engine: PickupName",
+    "condition" : "EQUALS",
+    "value" : "Exchange-generarCaratula"
+  } ],
+  "attributes" : [ ],
+  "@links" : {
+    "service" : [ {
+      "href" : "/api/v2/services/Service_Crear_Caratula_API"
+    } ],
+    "communities" : [ {
+      "href" : "/api/v2/communities/FT3"
+    } ]
+  },
+  "@id" : "3356033",
+  "@name" : "MP_Crear_Caratula_API"
+}
+}

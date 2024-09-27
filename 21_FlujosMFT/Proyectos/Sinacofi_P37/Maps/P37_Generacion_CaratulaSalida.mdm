@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="24/06/2024 15:30:14 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P37_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P37_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="2117974008" elementPath="/Linea/S_HEADS_HEAD/">
+         <dmlExpression><![CDATA["T"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1043917966" elementPath="/Linea/S_FOOTS_FOOT/">
+         <dmlExpression><![CDATA["FFFFFFFFFFFFFFF"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1381432678" elementPath="/Linea/EE1/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 15, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1697581340" elementPath="/Linea/IP0/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDC, 5,  index(in4:\Caratula\IDC, "}") - 5), 15, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1426196516" elementPath="/Linea/IP1/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDD, 5,  index(in4:\Caratula\IDD, "}") - 5), 15, "0")]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

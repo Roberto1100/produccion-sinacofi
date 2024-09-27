@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapStages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapStages_1.xsd">
+   <MapStage dmlCompatibility="2.1" id="eacd2fec-2556-4045-bd20-1ce3a78b05c1" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow" xmlVersion="1.0">
+      <Input id="21b2455e-0f99-4a0d-97f4-52f3b9bf34bb" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Input" xmlVersion="1.1">
+         <Properties>
+            <Property name="split" type="String">
+               <SimpleValue>false</SimpleValue>
+            </Property>
+         </Properties>
+      </Input>
+      <Outputs>
+         <Output id="3219fe58-6924-44eb-9e27-6f1890790a8a" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Buzon" xmlVersion="1.1">
+            <Properties>
+               <Property name="group" type="String">
+                  <SimpleValue>false</SimpleValue>
+               </Property>
+            </Properties>
+         </Output>
+      </Outputs>
+      <DataProcess>
+         <Node id="1" label="" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement" type="BusinessDocument" x="168.0" xmlVersion="1.0" y="90.0">
+            <Object id="2fda2dca-560f-4157-817f-52b4a8ce9afe">
+               <name>MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movement</name>
+               <lastModified>2024-06-04T16:30:32.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node id="2" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Input" type="Input" x="0.0" xmlVersion="1.0" y="30.0">
+            <Object id="21b2455e-0f99-4a0d-97f4-52f3b9bf34bb">
+               <name>MAPSERVICE.InsertMovement.Insert_Movement_Flow:Input</name>
+            </Object>
+         </Node>
+         <Node id="3" label="" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Main_Block_Insert_Movement_Flow1" type="MapBroker" x="329.0" xmlVersion="1.0" y="151.0">
+            <Object id="e032af9f-815a-45ae-b41b-4cb076743e0e">
+               <name>MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Main_Block_Insert_Movement_Flow1</name>
+               <lastModified>2024-06-04T16:30:32.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node id="4" label="" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion" type="BusinessDocument" x="784.0" xmlVersion="1.0" y="256.0">
+            <Object id="a91daccd-1073-4c31-9ac1-880c96b27f33">
+               <name>MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Notificacion</name>
+               <lastModified>2024-06-04T16:30:32.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node id="5" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Buzon" type="Output" x="924.0" xmlVersion="1.0" y="253.0">
+            <Object id="3219fe58-6924-44eb-9e27-6f1890790a8a">
+               <name>MAPSERVICE.InsertMovement.Insert_Movement_Flow:Buzon</name>
+            </Object>
+         </Node>
+         <Node channelType="SQL" id="6" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Channel" type="Channel" x="180.0" xmlVersion="1.0" y="100.0">
+            <Object id="ff4f9b43-e3e9-4a37-938c-bfeb24ff1100">
+               <name>MAPSERVICE.InsertMovement.Insert_Movement_Flow:Channel</name>
+               <lastModified>2024-04-25T15:31:44.000Z</lastModified>
+            </Object>
+         </Node>
+         <Link from="2" id="7" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Link1" to="1" xmlVersion="1.0"/>
+         <Link from="1" id="8" label="" name="in1" to="3" xmlVersion="1.0">
+            <Object id="5f28d552-7f2e-48c5-8d26-7d9b251094f6">
+               <name>MAPSERVICE.InsertMovement.Insert_Movement_Flow:in1</name>
+            </Object>
+         </Link>
+         <Link from="3" id="9" label="" mapBrokerOutput="out" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:out" to="4" xmlVersion="1.0">
+            <Object id="e95bec74-6c28-4832-a599-485bb785c6c4">
+               <name>MAPSERVICE.InsertMovement.Insert_Movement_Flow:out</name>
+            </Object>
+         </Link>
+         <Link from="4" id="10" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Link4" to="5" xmlVersion="1.0"/>
+         <Link from="3" id="11" label="" name="MAPSERVICE.InsertMovement.Insert_Movement_Flow:Link1_11" to="6" xmlVersion="1.0">
+            <FunctionList>
+               <Function>MAPSERVICE.InsertMovement.InsertMovTBL</Function>
+               <Function>MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo</Function>
+               <Function>MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo</Function>
+               <Function>MAPSERVICE.InsertMovement.GetCasillaDestinoByCorrelativo</Function>
+               <Function>MAPSERVICE.InsertMovement.GetFlujoByCorrelativo</Function>
+            </FunctionList>
+         </Link>
+      </DataProcess>
+      <Events/>
+      <DynamicMapBrokers/>
+      <Configuration>
+         <checkInputFacet>false</checkInputFacet>
+         <stopOnFirstInputFacetCheckError>false</stopOnFirstInputFacetCheckError>
+         <checkInputCheckConstraints>false</checkInputCheckConstraints>
+         <stopOnFirstInputCheckConstraintsError>false</stopOnFirstInputCheckConstraintsError>
+         <checkOutputFacet>false</checkOutputFacet>
+         <stopOnFirstOutputFacetCheckError>false</stopOnFirstOutputFacetCheckError>
+         <checkOutputCheckConstraints>false</checkOutputCheckConstraints>
+         <stopOnFirstOutputCheckConstraintsError>false</stopOnFirstOutputCheckConstraintsError>
+         <continueMessageProcessingOnError>false</continueMessageProcessingOnError>
+         <groupAllResultingInstances>false</groupAllResultingInstances>
+         <keepExactValue>true</keepExactValue>
+         <copyAttributes>true</copyAttributes>
+      </Configuration>
+   </MapStage>
+</MapStages>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 16:08:58 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P19_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P19_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count( \Details )
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%comunasConcatenadas:= "|";
+%totalPB7A:=0;
+%totalPB7B:=0;
+%totalPB9:=0;
+%totalPBA:=0;
+%totalPBB:=0;
+loop on \Details {
+	if ( countString( %comunasConcatenadas, "|" & getSubString( this\Contenido, 4, 6 ) & "|" ) = 0 ) then {
+		%comunasConcatenadas:= %comunasConcatenadas & getSubString( this\Contenido, 4, 6 ) & "|"
+  	};
+  	%totalPB7A:=%totalPB7A+convertToI( getSubString( this\Contenido, 11, 7 ) )+convertToI( getSubString( this\Contenido, 53, 7 ) )+convertToI( getSubString( this\Contenido, 95, 7 ) )+convertToI( getSubString( this\Contenido, 137, 7 ) );
+  	%totalPB7B:=%totalPB7B+convertToI( getSubString( this\Contenido, 18, 7 ) )+convertToI( getSubString( this\Contenido, 60, 7 ) )+convertToI( getSubString( this\Contenido, 102, 7 ) )+convertToI( getSubString( this\Contenido, 144, 7 ) );
+  	%totalPB9:=%totalPB9+convertToI( getSubString( this\Contenido, 179, 5 ) );
+  	%totalPBA:=%totalPBA+convertToI( getSubString( this\Contenido, 194, 5 ) )+convertToI( getSubString( this\Contenido, 199, 5 ) )+convertToI( getSubString( this\Contenido, 204, 5 ) );
+  	%totalPBB:=%totalPBB+convertToI( getSubString( this\Contenido, 25, 14 ) )+convertToI( getSubString( this\Contenido, 67, 14 ) )+convertToI( getSubString( this\Contenido, 109, 14 ) )+convertToI( getSubString( this\Contenido, 151, 14 ) )  	
+};
+%comunasDistintas:= countString( %comunasConcatenadas, "|" ) -1 ;
+%comunasDistintas]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%totalPB7A]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PB6/">
+         <dmlExpression><![CDATA[""]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1916415008" elementPath="/Datos/PB7B/">
+         <dmlExpression><![CDATA[%totalPB7B]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1700360367" elementPath="/Datos/PB9/">
+         <dmlExpression><![CDATA[%totalPB9]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1072747863" elementPath="/Datos/PBA/">
+         <dmlExpression><![CDATA[%totalPBA]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1719378268" elementPath="/Datos/PBB/">
+         <dmlExpression><![CDATA[%totalPBB]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1849625704" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="23f1ad29-5b18-45ed-8431-7be28fafaa07" label="" lastModified="2024-07-02T20:03:48.000Z" name="MAPSERVICE_Sinacofi_P14_P14_FT3::MAPSERVICE.Sinacofi_P14.Main_Block_P14_FT31" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="71f44ac7-e0fc-43a2-a5e8-b4e4f19e3968">
+                  <name>MAPSERVICE_Sinacofi_P14_P14_FT3::MAPSERVICE.Sinacofi_P14\Validacion_y_Error.LOG</name>
+                  <lastModified>2024-08-08T14:15:32.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in1</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepExit/>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

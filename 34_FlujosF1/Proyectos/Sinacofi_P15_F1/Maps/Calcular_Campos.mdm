@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 12:50:32 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P15_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P15_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/PA5/">
+         <dmlExpression><![CDATA[%Total_IDB:= 0;
+%comunasConcatenadas:="|";
+ loop on \Details  {
+ 	 	if (countString(%comunasConcatenadas, "|" & getSubString(this\Contenido, 4, 2) & "|") =0 and ( getSubString(this\Contenido,4,2 ) in ("01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16"))) 
+   then {
+   	%comunasConcatenadas:=%comunasConcatenadas & getSubString(this\Contenido, 4, 2) & "|"
+   };
+   	%Total_IDB:= %Total_IDB + convertToI(getSubString(this\Contenido, 12, 14))
+ };
+ %comunasDistintas:= countString(%comunasConcatenadas, "|") -1 ;
+%comunasDistintas]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PX3/">
+         <dmlExpression><![CDATA[ %Total_IDB]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-112639672" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

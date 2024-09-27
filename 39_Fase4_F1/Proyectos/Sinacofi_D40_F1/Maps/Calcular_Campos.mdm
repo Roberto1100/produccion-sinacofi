@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="22/07/2024 11:51:28 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D40_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D40_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/PAA/">
+         <dmlExpression><![CDATA[%totalDCM:=0;
+%totalDCN:=0;
+%totalDCO:=0;
+loop on \Details {
+	if (  not(getSubString( this\Contenido,1,2 )  in  ("06","08"))) 
+	then {
+  	%totalDCM:=%totalDCM+convertToI( getSubString( this\Contenido, 6, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "08" ) 
+    then {
+  	%totalDCN:=%totalDCN+convertToI( getSubString( this\Contenido, 6, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "06" ) 
+    then {
+  	%totalDCO:=%totalDCO+convertToI( getSubString( this\Contenido, 6, 14 ))
+             }
+};
+%totalDCM]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PAB/">
+         <dmlExpression><![CDATA[%totalDCN]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/PAC/">
+         <dmlExpression><![CDATA[%totalDCO]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="462099610" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

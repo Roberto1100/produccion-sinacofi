@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flow xmlns="http://www.axway.com/mappingServices/flow" id="f37bd1e2-d9b0-4c14-8405-77bc25894470">
+   <signature appVersion="3.1.2" lastUpdatedOn="13/06/2024 17:12:40 -0400"/>
+   <channelLinks>
+      <channelLink name="Link1" hash="1f26b346-9dbb-4c64-ab1c-f58a6d30ae8c" virtual="true">
+         <source ref="02a18ed3-71eb-431e-a139-72784f94f3c4"/>
+         <target ref="b4242f14-a443-4db5-89a2-fbc08d2dd579"/>
+         <functions>
+            <function>~/Extended Objects/InsertErrorTBL.fct</function>
+            <function>~/Extended Objects/GetEntidadByCasilla.fct</function>
+            <function>~/Extended Objects/GetLargoRegistroByTD.fct</function>
+            <function>~/Extended Objects/InsertMovTBL.fct</function>
+         </functions>
+      </channelLink>
+      <channelLink name="Link1" hash="0b67e6fe-e6ca-43c9-81e0-19150e225507" virtual="true">
+         <source ref="ddec0MB3-706a-4db5-a7ac-a14fde47f3f3"/>
+         <target ref="b4242f14-a443-4db5-89a2-fbc08d2dd579"/>
+         <functions>
+            <function>~/Extended Objects/InsertErrorTBL.fct</function>
+            <function>~/Extended Objects/InsertMovTBL.fct</function>
+         </functions>
+      </channelLink>
+      <channelLink name="Link1" hash="3MB399af-5064-46ae-93e2-979628db08ae" virtual="true">
+         <source ref="4015b54a-c649-4e47-b9f7-d41e3e8b10e8"/>
+         <target ref="b4242f14-a443-4db5-89a2-fbc08d2dd579"/>
+         <functions>
+            <function>~/Extended Objects/InsertErrorTBL.fct</function>
+            <function>~/Extended Objects/ValidarEstructuraCAR.fct</function>
+            <function>~/Extended Objects/InsertMovTBL.fct</function>
+            <function>~/Extended Objects/CargarCampos.fct</function>
+         </functions>
+      </channelLink>
+   </channelLinks>
+   <channels>
+      <channel name="Channel" hash="b4242f14-a443-4db5-89a2-fbc08d2dd579">
+         <ChannelType>
+            <![CDATA[DATABASE]]>
+         </ChannelType>
+      </channel>
+   </channels>
+   <configurationParameters>
+      <configurationParameter name="checkInputFacet" value="true"/>
+      <configurationParameter name="stopOnFirstInputFacetCheckError" value="false"/>
+      <configurationParameter name="checkInputCheckConstraints" value="true"/>
+      <configurationParameter name="stopOnFirstInputCheckConstraintsError" value="false"/>
+      <configurationParameter name="checkOutputFacet" value="false"/>
+      <configurationParameter name="stopOnFirstOutputFacetCheckError" value="false"/>
+      <configurationParameter name="checkOutputCheckConstraints" value="false"/>
+      <configurationParameter name="stopOnFirstOutputCheckConstraintsError" value="false"/>
+      <configurationParameter name="continueMessageProcessingOnError" value="false"/>
+      <configurationParameter name="groupAllResultingInstances" value="false"/>
+      <configurationParameter name="keepExactValue" value="true"/>
+      <configurationParameter name="copyAllAttributes" value="true"/>
+   </configurationParameters>
+   <graphLinks>
+      <graphLink factoryType="FlowMainLink" name="FlowLink2" type="TYPE_OUTPUT" connectedObjectAlias="out" hash="856e2279-d2be-439d-85c5-772df9fcbd61">
+         <source ref="216e2589-bf32-4e19-88ae-7444feab4cde"/>
+         <target ref="bc7d07db-776f-485d-9608-62148c10be6d"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink4" type="TYPE_INPUT" connectedObjectAlias="in" hash="22b1e4d5-1b79-4253-b05b-82f683780dd6">
+         <source ref="bc7d07db-776f-485d-9608-62148c10be6d"/>
+         <target ref="cf0945b0-28c2-4639-a6c9-bddbb3e71ab9"/>
+      </graphLink>
+      <graphLink name="Link10" hash="bdd0a8c8-5d06-46f0-8b67-50b7f119b738">
+         <source ref="216e2589-bf32-4e19-88ae-7444feab4cde"/>
+         <target ref="8f791d7d-735b-4209-b857-6a9bc6c4d15a"/>
+      </graphLink>
+      <graphLink name="Link2" hash="457695dd-c49b-4564-8454-c6445e28dc80">
+         <source ref="ea9bc5c0-4d63-4fb9-9808-997c8d85dcaf"/>
+         <target ref="ddec0MB3-706a-4db5-a7ac-a14fde47f3f3"/>
+      </graphLink>
+      <graphLink name="Link3" hash="c1bbebea-504c-45ad-b236-9c3a2e7376aa">
+         <source ref="ca543b0f-9fa4-483a-9374-6c0e05e0e203"/>
+         <target ref="143098ae-5929-46ac-aa3d-b9b607bf0815"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink6" type="TYPE_OUTPUT" connectedObjectAlias="out2" hash="4453e784-07d4-4003-b8c1-ee7b2f50fdff">
+         <source ref="645c5950-c281-49d4-b490-b357558dMB34"/>
+         <target ref="330d2051-ecc4-4c5e-b6e3-aa3eef1e8a9f"/>
+      </graphLink>
+      <graphLink name="Link6" hash="30a8d3c0-508a-4850-9a3e-5ae46546a3b4">
+         <source ref="645c5950-c281-49d4-b490-b357558dMB34"/>
+         <target ref="b4b319f3-91e5-43da-9ba6-f3c1f9b78583"/>
+      </graphLink>
+      <graphLink name="Link9" hash="f9c77cbb-5MB3-42b5-a608-79921fd5cc8a">
+         <source ref="330d2051-ecc4-4c5e-b6e3-aa3eef1e8a9f"/>
+         <target ref="1b1ee5cb-9bbc-4d4c-8c13-ec9075604fb8"/>
+      </graphLink>
+      <graphLink name="Link1" hash="5831504a-a848-433d-a827-5132f148946e">
+         <source ref="b597a79c-7d3b-47b0-b972-e65bc9facfa4"/>
+         <target ref="0a6fd1eb-bd4a-4a2c-8a29-97981309a527"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink1" type="TYPE_INPUT" connectedObjectAlias="in" hash="f222b79c-6c7b-403d-9c34-e8e4dddd8dd3">
+         <source ref="0a6fd1eb-bd4a-4a2c-8a29-97981309a527"/>
+         <target ref="02a18ed3-71eb-431e-a139-72784f94f3c4"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink3" type="TYPE_OUTPUT" connectedObjectAlias="out" hash="beaf7da8-0b5b-40f8-a13b-015252e3f5b6">
+         <source ref="839d3b9f-9919-4d2c-a66f-61e3c18c06e2"/>
+         <target ref="b84b2a17-7e28-4f15-bfbd-7cab58911e32"/>
+      </graphLink>
+      <graphLink name="Link4" hash="36119aa3-8f03-4211-b04d-2bb950adc461">
+         <source ref="839d3b9f-9919-4d2c-a66f-61e3c18c06e2"/>
+         <target ref="cc0672b3-b996-42e0-8b48-b5f82703b65f"/>
+      </graphLink>
+      <graphLink name="Link5" hash="c5263649-b133-4e29-b8b3-f6761a479074">
+         <source ref="cc0672b3-b996-42e0-8b48-b5f82703b65f"/>
+         <target ref="645c5950-c281-49d4-b490-b357558dMB34"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink7" type="TYPE_OUTPUT" connectedObjectAlias="out1" hash="793def93-bc75-4a56-8ff6-9920f02728a7">
+         <source ref="cc0672b3-b996-42e0-8b48-b5f82703b65f"/>
+         <target ref="a109ed7f-dd21-42f5-a3a5-116747ac8df0"/>
+      </graphLink>
+      <graphLink name="Link7" hash="f0ab5ea3-737c-4e23-93af-d1cd63a5ccb0">
+         <source ref="a109ed7f-dd21-42f5-a3a5-116747ac8df0"/>
+         <target ref="0efec2ae-9ba1-4e25-92c6-2fdb08338c20"/>
+      </graphLink>
+      <graphLink factoryType="FlowMainLink" name="FlowLink5" type="TYPE_INPUT" connectedObjectAlias="in1" hash="b00c24ad-aeda-4dea-81d5-cf37762799f5">
+         <source ref="b84b2a17-7e28-4f15-bfbd-7cab58911e32"/>
+         <target ref="4015b54a-c649-4e47-b9f7-d41e3e8b10e8"/>
+      </graphLink>
+      <graphLink name="Link8" hash="0bd39dad-3a59-4a4d-a1fa-0b7f703df379">
+         <source ref="af9a7795-2ef6-4be5-8f26-ac9c8e3f45c0"/>
+         <target ref="f6fbf1d6-8e0c-4315-bf08-a1d899377918"/>
+      </graphLink>
+   </graphLinks>
+   <graphNodes>
+      <graphNode factoryType="InputEntity" name="Input" hash="b597a79c-7d3b-47b0-b972-e65bc9facfa4">
+         <bounds x="10" height="50" width="112" y="10"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Validar_Datos" nameDisplayed="true" hash="02a18ed3-71eb-431e-a139-72784f94f3c4">
+         <bounds x="314" height="190" width="157" y="10"/>
+         <channelLinks>
+            <channelLink ref="1f26b346-9dbb-4c64-ab1c-f58a6d30ae8c"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionMap" name="ArchivoDatosVal_A_ArchivoDatos_FRONT" nameDisplayed="true" mapName="~/Maps/ArchivoDatosVal_A_ArchivoDatos_FRONT.mdm" hash="216e2589-bf32-4e19-88ae-7444feab4cde">
+               <bounds x="10" height="50" width="112" y="20"/>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="8f791d7d-735b-4209-b857-6a9bc6c4d15a">
+               <dmlExpression><![CDATA[if %var_error1 = "" then {
+	%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+	%MovimientoProcesado:=InsertMovTBL(%correlativoPrefijo, null , count(in:\Registros), null, "30", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+}]]></dmlExpression>
+               <bounds x="10" height="50" width="100" y="100"/>
+            </instruction>
+         </intructions>
+         <functionsWithChannels>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertMovTBL.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/GetLargoRegistroByTD.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/GetEntidadByCasilla.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertErrorTBL.fct</functionWithChannel>
+         </functionsWithChannels>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="MB3_Archivo_Datos" hash="bc7d07db-776f-485d-9608-62148c10be6d">
+         <bounds x="511" height="50" width="112" y="31"/>
+         <documentName>~/Business Documents/ArchivosEntrada/MB3_Archivo_Datos.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Calcular_Cam" nameDisplayed="true" hash="cf0945b0-28c2-4639-a6c9-bddbb3e71ab9">
+         <bounds x="663" height="370" width="157" y="10"/>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionMap" name="Calcular_Campos" nameDisplayed="true" mapName="~/Maps/Calcular_Campos.mdm" hash="839d3b9f-9919-4d2c-a66f-61e3c18c06e2">
+               <bounds x="10" height="50" width="112" y="20"/>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionOutput" name="Out2" hash="645c5950-c281-49d4-b490-b357558dMB34">
+               <bounds x="10" height="50" width="112" y="190"/>
+               <inputDocumentAlias businessDocument="~/Business Documents/ArchivosEntrada/MB3_Archivo_Datos.bdoc" alias="in"/>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="b4b319f3-91e5-43da-9ba6-f3c1f9b78583">
+               <dmlExpression><![CDATA[%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+setDocumentAttributeToOutput( "out1",  "B2BXGISend_ProductionFilename",%correlativoPrefijo + "_" + "datosSalida");
+setDocumentAttributeToOutput( "out2",  "B2BXGISend_ProductionFilename", getSubString(getAttribute("B2BXGIReceive_ConsumptionFilename" ), 5, 255) + getAttribute( "B2BXGIReceive_ConsumptionExtension"))]]></dmlExpression>
+               <bounds x="10" height="50" width="100" y="280"/>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionOutput" name="Out1" hash="cc0672b3-b996-42e0-8b48-b5f82703b65f">
+               <bounds x="10" height="50" width="112" y="100"/>
+               <inputDocumentAlias businessDocument="~/Business Documents/ArchivosEntrada/MB3_Archivo_Datos.bdoc" alias="in"/>
+            </instruction>
+         </intructions>
+      </graphNode>
+      <graphNode factoryType="GraphicalEventEntity" name="ERROR" hash="ea9bc5c0-4d63-4fb9-9808-997c8d85dcaf" level="ERROR">
+         <bounds x="30" height="50" width="112" y="261"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Evento_Error" nameDisplayed="true" hash="ddec0MB3-706a-4db5-a7ac-a14fde47f3f3">
+         <bounds x="229" height="310" width="235" y="281"/>
+         <channelLinks>
+            <channelLink ref="0b67e6fe-e6ca-43c9-81e0-19150e225507"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionIf" name="If1" nameDisplayed="true" hash="ca543b0f-9fa4-483a-9374-6c0e05e0e203">
+               <dmlExpression><![CDATA[countString(getTraces(), "IO Error: The Network Adapter could not establish the connection") = 0]]></dmlExpression>
+               <bounds x="10" height="170" width="190" y="20"/>
+               <intructions>
+                  <instruction factoryType="GraphicalInstructionBlockTrue" name="Then" nameDisplayed="true" hash="0fe40f14-b892-41e6-ab80-4651440fcadf">
+                     <bounds x="10" height="110" width="145" y="20"/>
+                     <intructions>
+                        <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="c726f22f-518e-4a69-8c86-f80c81359a90">
+                           <dmlExpression><![CDATA[%debug:= getTraces();
+if( (%var_error1 <> "OK"))then{
+		%var_error1:=Sinacofi_MB3_F1.InsertErrorTBL(
+			%correlativoPrefijo,
+			"000", 
+			"Error Interno: "&getSubString(%debug, 1, 4000), 
+			formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+		)
+};
+%var_error1:= InsertMovTBL(%correlativoPrefijo, null, %var_registro1, null, "00", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+]]></dmlExpression>
+                           <bounds x="10" height="50" width="100" y="20"/>
+                        </instruction>
+                     </intructions>
+                  </instruction>
+               </intructions>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionExit" name="Exit1" hash="143098ae-5929-46ac-aa3d-b9b607bf0815">
+               <bounds x="10" height="50" width="112" y="220"/>
+            </instruction>
+         </intructions>
+         <functionsWithChannels>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertMovTBL.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertErrorTBL.fct</functionWithChannel>
+         </functionsWithChannels>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="MB3_Archivo_Datos" hash="330d2051-ecc4-4c5e-b6e3-aa3eef1e8a9f">
+         <bounds x="860" height="50" width="112" y="207"/>
+         <documentName>~/Business Documents/ArchivosEntrada/MB3_Archivo_Datos.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="OutputEntity" name="Backup" hash="1b1ee5cb-9bbc-4d4c-8c13-ec9075604fb8">
+         <bounds x="821" height="50" width="112" y="374"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="MB3_Archivo_Datos_Val" hash="0a6fd1eb-bd4a-4a2c-8a29-97981309a527">
+         <bounds x="162" height="50" width="112" y="10"/>
+         <documentName>~/Business Documents/ArchivosMomentaneos/MB3_Archivo_Datos_Val.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="MB3_Caratula_Salida" hash="b84b2a17-7e28-4f15-bfbd-7cab58911e32">
+         <bounds x="860" height="50" width="112" y="31"/>
+         <documentName>~/Business Documents/Salida/MB3_Caratula_Salida.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="GraphicalBusinessDocumentEntity" name="MB3_Archivo_Datos" hash="a109ed7f-dd21-42f5-a3a5-116747ac8df0">
+         <bounds x="860" height="50" width="112" y="117"/>
+         <documentName>~/Business Documents/ArchivosEntrada/MB3_Archivo_Datos.bdoc</documentName>
+      </graphNode>
+      <graphNode factoryType="OutputEntity" name="Salida" hash="0efec2ae-9ba1-4e25-92c6-2fdb08338c20">
+         <bounds x="1075" height="50" width="112" y="235"/>
+      </graphNode>
+      <graphNode factoryType="GraphicalInstructionBlock" name="Insertar_Campos" nameDisplayed="true" hash="4015b54a-c649-4e47-b9f7-d41e3e8b10e8">
+         <bounds x="1053" height="190" width="157" y="10"/>
+         <channelLinks>
+            <channelLink ref="3MB399af-5064-46ae-93e2-979628db08ae"/>
+         </channelLinks>
+         <intructions>
+            <instruction factoryType="GraphicalInstructionSet" name="Set1" hash="af9a7795-2ef6-4be5-8f26-ac9c8e3f45c0">
+               <dmlExpression><![CDATA[%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%resEstructuraValida:= ValidarEstructuraCAR( %correlativoPrefijo, "PA1|MOF" );
+if( %resEstructuraValida = "NK" )then{
+	%var_error1:= InsertErrorTBL(
+		%correlativoPrefijo,
+		"000", 
+		"Estructura de caratula ha sido modificada",
+		formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	);
+	%var_error1:= InsertMovTBL(%correlativoPrefijo, null, %var_registro1, null, "00", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+} else {
+	%ValoresConcatenados:= in1:\Datos\!34! & "|" & in1:\Datos\PA1 & "|" &  in1:\Datos\MOF;
+	%MovimientoProcesado:=InsertMovTBL(%correlativoPrefijo, null , null, null, "34", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"));
+	%resCargarCampos:= CargarCampos( %correlativoPrefijo , %ValoresConcatenados )
+}]]></dmlExpression>
+               <bounds x="10" height="50" width="100" y="20"/>
+            </instruction>
+            <instruction factoryType="GraphicalInstructionExit" name="Exit1" hash="f6fbf1d6-8e0c-4315-bf08-a1d899377918">
+               <bounds x="10" height="50" width="112" y="100"/>
+            </instruction>
+         </intructions>
+         <functionsWithChannels>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertMovTBL.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/InsertErrorTBL.fct</functionWithChannel>
+            <functionWithChannel>/Sinacofi_MB3_F1/Extended Objects/ValidarEstructuraCAR.fct</functionWithChannel>
+         </functionsWithChannels>
+      </graphNode>
+   </graphNodes>
+</flow>

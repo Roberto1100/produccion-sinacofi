@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="b84f59f3-9277-46cb-9aeb-c444738fa5bb">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/07/2024 15:48:21 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/ArchivosMomentaneos/P14_CAR_Val.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosMomentaneos/P14_CAR_Existe_Val.bdoc" alias="in1"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1582944942" elementPath="/Caratula/Campos/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[1]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-89559001" elementPath="/Caratula/NMS/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[2]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2089822173" elementPath="/Caratula/IDU/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[3]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2069391459" elementPath="/Caratula/FGB/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[4]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2050683779" elementPath="/Caratula/HGB/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[5]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1225018204" elementPath="/Caratula/MSG/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[6]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="911785351" elementPath="/Caratula/PRI/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[7]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-849446173" elementPath="/Caratula/TID/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[8]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-480340624" elementPath="/Caratula/NSE/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[9]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1025989394" elementPath="/Caratula/FEN/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[10]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-851475975" elementPath="/Caratula/HEN/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[11]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-931508233" elementPath="/Caratula/G01/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[12]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1753388169" elementPath="/Caratula/18/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[13]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1725230224" elementPath="/Caratula/20/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[14]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1216588302" elementPath="/Caratula/34/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[15]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1472638690" elementPath="/Caratula/PA1/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[16]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1717432594" elementPath="/Caratula/79/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[24]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2109514769" elementPath="/Caratula/FIN/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[25]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="760614422" elementPath="/Caratula/PN0/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[17]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1216661309" elementPath="/Caratula/PN1/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[18]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1645528538" elementPath="/Caratula/PN2/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[19]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1464832832" elementPath="/Caratula/PN3/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[20]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-744537878" elementPath="/Caratula/PN4/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[21]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1145725029" elementPath="/Caratula/PN5/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[22]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1766419657" elementPath="/Caratula/PN6/">
+         <dmlExpression><![CDATA[getSubString(in1:\Caratula[23]\Campos, 1, 255)]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

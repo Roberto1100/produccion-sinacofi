@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="1e49a5f8-f6a0-4a32-9c71-45df0ad8d0af">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CARGACAMPOSCALCULADOS (#CORRELATIVO#, #VALORES#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="06/03/2024 12:38:32 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="CORRELATIVO" description="label param0"/>
+      <parameter dmlClass="S" name="VALORES" description="label param1"/>
+   </parameters>
+</customFunction>

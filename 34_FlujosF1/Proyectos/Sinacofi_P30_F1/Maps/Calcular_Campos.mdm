@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 17:42:55 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P30_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P30_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/PY1/">
+         <dmlExpression><![CDATA[%totalPY1:= 0;
+%totalPY3:= 0;
+%totalPY5:= 0;
+%totalPY7:= 0;
+%totalPY8:= 0;
+loop on \Details {
+if(getSubString(this\Contenido, 1, 2) = "01" or getSubString(this\Contenido, 1, 2) = "02" )
+    then{	
+   		 %totalPY1:=%totalPY1+convertToI(getSubString(this\Contenido, 7,7))+convertToI(getSubString(this\Contenido, 56,7))
+   		 };
+ if(getSubString(this\Contenido, 1, 2) = "05" or getSubString(this\Contenido, 1, 2) = "06" )
+    then{	
+   		 %totalPY3:=%totalPY3+convertToI(getSubString(this\Contenido, 7,7))+convertToI(getSubString(this\Contenido, 56,7))
+   		 };
+  if(getSubString(this\Contenido, 1, 2) ="01"or getSubString(this\Contenido, 1, 2) ="02"or getSubString(this\Contenido, 1, 2) ="05" or getSubString(this\Contenido, 1, 2) ="06" )
+    then{	
+   		 %totalPY5:=%totalPY5+convertToI(getSubString(this\Contenido, 28,14))+convertToI(getSubString(this\Contenido, 42,14))
+   		 };
+  if(getSubString(this\Contenido, 1, 2) ="11"or getSubString(this\Contenido, 1, 2) ="12" )
+    then{	
+   		 %totalPY7:=%totalPY7+convertToI(getSubString(this\Contenido, 7,7))+convertToI(getSubString(this\Contenido, 56,7))
+   		 };
+  if(getSubString(this\Contenido, 1, 2) ="11"or getSubString(this\Contenido, 1, 2) ="12" )
+    then{	
+   		 %totalPY8:=%totalPY8+convertToI(getSubString(this\Contenido, 28,14))+convertToI(getSubString(this\Contenido, 42,14))
+   		 }
+};
+%totalPY1
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PY3/">
+         <dmlExpression><![CDATA[%totalPY3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/PY5/">
+         <dmlExpression><![CDATA[%totalPY5]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/PY7/">
+         <dmlExpression><![CDATA[%totalPY7]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1916415008" elementPath="/Datos/PY8/">
+         <dmlExpression><![CDATA[%totalPY8]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1950056046" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

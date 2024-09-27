@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="30/05/2024 18:20:50 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/EF1_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/EF1_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1855361394" elementPath="/PA6/Linea/">
+         <dmlExpression><![CDATA["001"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-352978166" elementPath="/PA6/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1309664384" elementPath="/PA6/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-709569153" elementPath="/PA6/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

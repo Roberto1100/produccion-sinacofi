@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="08/07/2024 20:10:55 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/C18_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/C18_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count( \Details )
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%totalCED:=0;
+%totalCEE:=0;
+%totalCEF:=0;
+%totalCEG:=0;
+%totalCEH:=0;
+%totalCEI:=0;
+%totalCEK:=0;
+loop on \Details {
+	if ( getSubString( this\Contenido, 21, 1 ) = "1" ) then {
+		%totalCED:=%totalCED + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 ))
+    	};
+  	if ( getSubString( this\Contenido, 21, 1 ) = "2" ) then {
+			%totalCEE:=%totalCEE + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 ))
+  	   };
+  	if ( getSubString( this\Contenido, 21, 1 ) = "3" ) then {
+			%totalCEF:=%totalCEF + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 ))
+  	  };
+  	 if ( getSubString( this\Contenido, 22, 1 ) = "1" ) then {
+			%totalCEG:=%totalCEG + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 ))
+  	  };  	
+  	  if ( getSubString( this\Contenido, 22, 1 ) = "2" ) then {
+			%totalCEH:=%totalCEH + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 )) 	 
+	 };
+  	   if ( getSubString( this\Contenido, 22, 1 ) = "3" ) then {
+			%totalCEI:=%totalCEI + convertToI( getSubString( this\Contenido, 23, 14 ))+ convertToI( getSubString( this\Contenido, 37, 14 ))+ convertToI( getSubString( this\Contenido, 51, 14 ))+ convertToI( getSubString( this\Contenido, 65, 14 ))+ convertToI( getSubString( this\Contenido, 79, 14 ))+ convertToI( getSubString( this\Contenido, 93, 14 ))+ convertToI( getSubString( this\Contenido, 107, 14 ))
+  	  };
+  	  %totalCEK:=%totalCEK +convertToI( getSubString( this\Contenido, 121, 14 ))
+  };
+%totalCED]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%totalCEF]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[%totalCEG]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PB6/">
+         <dmlExpression><![CDATA[%totalCEE]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1172170949" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,8,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-835910753" elementPath="/Datos/CEH/">
+         <dmlExpression><![CDATA[%totalCEH]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1779891201" elementPath="/Datos/CEI/">
+         <dmlExpression><![CDATA[%totalCEI]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2083607726" elementPath="/Datos/CEK/">
+         <dmlExpression><![CDATA[%totalCEK]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

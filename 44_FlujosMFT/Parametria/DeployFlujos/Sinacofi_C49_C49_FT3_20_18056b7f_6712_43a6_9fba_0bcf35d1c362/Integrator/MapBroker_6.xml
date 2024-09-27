@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="ee134739-5160-48cd-a370-c23d36424b2d" label="" lastModified="2024-04-03T15:51:34.000Z" name="MAPSERVICE_Sinacofi_C49_C49_FT3::MAPSERVICE.Sinacofi_C49.Main_Block_Evento" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments/>
+         <DecisionPath>
+            <StepMappingRule>
+               <MappingRule id="e2aa1ebc-b237-4432-9516-c8807af16404" label="" lastModified="2024-04-25T15:13:46.000Z" name="MAPSERVICE_Sinacofi_C49_C49_FT3::MAPSERVICE.Sinacofi_C49.Creacion_LOG:Creacion_LOG" xmlVersion="1.0">
+                  <OutputBusinessDocument id="71f44ac7-e0fc-43a2-a5e8-b4e4f19e3968">
+                     <name>MAPSERVICE_Sinacofi_C49_C49_FT3::MAPSERVICE.Sinacofi_C49\Validacion_y_Error.LOG</name>
+                     <lastModified>2024-04-25T15:13:46.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA[%Sinacofi_C49.debug:=getTraces();
+%Sinacofi_C49.debug]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepStep>
+               <DmlExpression><![CDATA[setDocumentAttributeToOutput( "out",  "B2BXGISend_ProductionFilename", formatString(getDateAndTime(), "CCYYMMDDhhmmss")  + "_" + %Sinacofi_C49.correlativoPrefijo + "_" + %Sinacofi_C49.usuarioPrefijo&"_"&%Sinacofi_C49.NombreArchivo&".LOG")]]></DmlExpression>
+            </StepStep>
+            <StepMappingRule>
+               <MappingRule id="0ec8f17a-d821-4f65-8563-7046f3f4c256" label="" lastModified="2024-04-25T15:13:46.000Z" name="MAPSERVICE_Sinacofi_C49_C49_FT3::MAPSERVICE.Sinacofi_C49.Creacion_Resultado_NK:Creacion_Resultado_NK" xmlVersion="1.0">
+                  <OutputBusinessDocument id="7422d2f4-35a3-4ffb-938f-240200fa7981">
+                     <name>MAPSERVICE_Sinacofi_C49_C49_FT3::MAPSERVICE.Sinacofi_C49\Mensajeria.Resultado</name>
+                     <lastModified>2024-04-25T15:13:46.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="7">
+                     <Expression>
+                        <DmlExpression><![CDATA["FIN_MENSAJE"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA["MENSAJE_RESULTADO"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringRight(%NombreArchivo, 20,  " ")&"NK"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="5">
+                     <Expression>
+                        <DmlExpression><![CDATA[if( (%Sinacofi_C49.var_error1 <> "OK"))then{
+		%Sinacofi_C49.glosa:= "Error Interno"
+	} else {
+		%Sinacofi_C49.glosa:= "Detalles con los errores ver en sitio web"
+	};
+%Sinacofi_C49.glosa]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out1</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

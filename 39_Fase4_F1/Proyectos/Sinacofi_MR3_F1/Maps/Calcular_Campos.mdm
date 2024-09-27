@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="06/06/2024 12:49:50 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/MR3_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/MR3_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1405454919" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 8,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1016841605" elementPath="/Datos/MOA/">
+         <dmlExpression><![CDATA[%Total_MOF:= 0;
+loop on \Details  {
+    if( getSubString( this\Contenido, 28,1 ) = "-" ) then{
+        %Total_MOF:= %Total_MOF - convertToI(getSubString(this\Contenido, 14, 14))
+    }else{
+        %Total_MOF:= %Total_MOF + convertToI(getSubString(this\Contenido, 14, 14))
+    }    
+};
+%Total_MOF]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

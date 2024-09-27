@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="26/06/2024 16:46:43 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Datos" hash="-1311734049">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="6" typeId="10" paddingCharElement=" " name="34" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1469025598" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="PA1" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1092621081" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="CAS" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-843794796" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

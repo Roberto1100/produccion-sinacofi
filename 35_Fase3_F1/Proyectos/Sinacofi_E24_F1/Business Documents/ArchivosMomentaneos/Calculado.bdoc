@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="e24070bc-6da2-477b-8789-dc9e682496a6" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="22/05/2024 18:06:06 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" label="Root" name="Campo" parentDelimiterElement="3" hash="375193025">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" paddingCharElement=" " name="IDC" leafDelimiterElement="2" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-144482262" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" paddingCharElement=" " name="IDD" leafDelimiterElement="2" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="1319220879" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

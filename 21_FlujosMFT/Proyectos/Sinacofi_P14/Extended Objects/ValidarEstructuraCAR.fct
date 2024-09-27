@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="33471ac7-5872-4709-b75a-0fc814d91ab6">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_VALIDAESTRUCTURACARATULA(#msg#, #string#) FROM Dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="29/01/2024 13:08:03 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="msg" description="label param0"/>
+      <parameter dmlClass="S" name="string" description="label param1"/>
+   </parameters>
+</customFunction>

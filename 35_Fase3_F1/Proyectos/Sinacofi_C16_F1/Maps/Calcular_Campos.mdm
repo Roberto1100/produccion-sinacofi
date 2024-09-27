@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="08/07/2024 17:34:09 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/C16_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/C16_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-843794796" elementPath="/Datos/CGB/">
+         <dmlExpression><![CDATA[%Total_CAU:= 0;
+%Total_CAV:= 0;
+loop on \Details {
+        %Total_CAU:= %Total_CAU + convertToI(getSubString(this\Contenido, 1, 14)) + convertToI(getSubString(this\Contenido, 29, 14)) + convertToI(getSubString(this\Contenido, 57, 14)) + convertToI(getSubString(this\Contenido, 85, 14)) + convertToI(getSubString(this\Contenido, 113, 14));
+        
+        %Total_CAV:= %Total_CAV + convertToI(getSubString(this\Contenido, 15, 14)) + convertToI(getSubString(this\Contenido, 43, 14)) + convertToI(getSubString(this\Contenido, 63, 14)) + convertToI(getSubString(this\Contenido, 99, 14)) + convertToI(getSubString(this\Contenido, 127, 14))
+    };
+%Total_CAU]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="555679676" elementPath="/Datos/AJC/">
+         <dmlExpression><![CDATA[%Total_CAV]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1285490520" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

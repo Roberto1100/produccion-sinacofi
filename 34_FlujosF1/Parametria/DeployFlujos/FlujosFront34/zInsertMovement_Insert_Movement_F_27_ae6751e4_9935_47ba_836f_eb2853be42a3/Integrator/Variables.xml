@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Variables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Variables.xsd">
+   <Variable dmlCompatibility="2.1" id="9a4c9618-faef-4337-b6af-b99c3d53ee72" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Correlativo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <DmlExpression>""</DmlExpression>
+   </Variable>
+   <Variable dmlCompatibility="2.1" id="2e668824-656d-4149-a0eb-7f421d3aa3aa" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.CodEstado" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <DmlExpression>""</DmlExpression>
+   </Variable>
+   <Variable dmlCompatibility="2.1" id="906ab3bd-1eeb-40f8-8cb3-25bfc9351a09" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Movimiento" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <DmlExpression>""</DmlExpression>
+   </Variable>
+   <Variable dmlCompatibility="2.1" id="40fb5a29-99ed-4212-ba03-789d0842bae2" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.NombreArchivo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <DmlExpression>""</DmlExpression>
+   </Variable>
+   <Variable dmlCompatibility="2.1" id="024e037a-7845-49a8-9f09-f06b14f58d53" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement.Casilla" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <DmlExpression>""</DmlExpression>
+   </Variable>
+</Variables>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/xsdBusinessDocument" id="1ed15ef0-ddbf-4dd3-a94d-0a1b6ce9f72a" keepDecimalSeparatorCharacter="true" schema="~/Business Documents/XSD_Datos_in.xsd" keepDecimalSeparator="true" keepInputNumberFractionDigits="true" keepIntegerPlusSign="true" encodingBD="utf8" keepInputNumberDateDigits="true" keepPlusSign="true" elementName="inbound">
+   <signature appVersion="3.1.2" lastUpdatedOn="27/03/2024 15:37:05 -0300"/>
+   <namespacePairs>
+      <namespacePair xmlPrefix="xs" xmlUri="http://www.w3.org/2001/XMLSchema"/>
+   </namespacePairs>
+</businessDocument>

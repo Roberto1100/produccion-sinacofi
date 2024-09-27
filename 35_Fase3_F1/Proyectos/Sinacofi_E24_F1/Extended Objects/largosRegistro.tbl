@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table xmlns="http://www.axway.com/mappingServices/table" beginDate="01/01/1900 12:00:00 -0442" endDate="31/12/2199 12:00:00 -0300" sendContentsToServer="true" id="7cb5ee9d-52aa-4119-b848-157ac9959df9">
+   <signature appVersion="3.1.2" lastUpdatedOn="12/06/2024 16:53:35 -0400"/>
+   <columns>
+      <column dmlClass="I" name="tipoRegistro" label="Key" definition="38" isKey="true"/>
+      <column dmlClass="I" name="largo" label="Value" definition="38"/>
+      <column dmlClass="D" name="StartDate" label="StartDate" definition="255" id="1"/>
+      <column dmlClass="D" name="EndDate" label="EndDate" definition="255" id="2"/>
+   </columns>
+   <rows>
+      <row>
+         <values>
+            <value>1</value>
+            <value>161</value>
+            <value>1900-01-01 12:00:00</value>
+            <value>2199-12-31 12:00:00</value>
+         </values>
+      </row>
+      <row>
+         <values>
+            <value>2</value>
+            <value>99</value>
+            <value>1900-01-01 12:00:00</value>
+            <value>2199-12-31 12:00:00</value>
+         </values>
+      </row>
+   </rows>
+</table>

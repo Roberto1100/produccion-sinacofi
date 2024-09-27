@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="cf8305bd-f713-4577-8b2d-cba9d6D26ee5">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CANTIDAD_CASILLA (#casilla#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="22/12/2023 14:37:56 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="casilla" description="label param0"/>
+   </parameters>
+</customFunction>

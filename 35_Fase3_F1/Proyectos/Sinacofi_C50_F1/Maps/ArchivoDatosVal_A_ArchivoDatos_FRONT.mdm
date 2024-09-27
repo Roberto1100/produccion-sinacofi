@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="f6a10238-f643-42a4-ab0a-251f445dcbaf">
+   <signature appVersion="3.1.2" lastUpdatedOn="16/04/2024 15:08:17 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/C50_Archivo_Datos.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosMomentaneos/C50_Archivo_Datos_Val.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1448850566" elementPath="/Header/Datos/">
+         <dmlExpression><![CDATA[in:\Header\Datos]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="242184537" elementPath="/Details/">
+         <dmlExpression><![CDATA[for each in:\Registros]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1643342877" elementPath="/Details/Contenido/">
+         <dmlExpression><![CDATA[this\Contenido]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="c4c78610-7b02-42c0-8efe-136047d68f3d">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT CORRELATIVO_SALIDA.NEXTVAL FROM dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="06/03/2024 13:11:47 -0300"/>
+</customFunction>

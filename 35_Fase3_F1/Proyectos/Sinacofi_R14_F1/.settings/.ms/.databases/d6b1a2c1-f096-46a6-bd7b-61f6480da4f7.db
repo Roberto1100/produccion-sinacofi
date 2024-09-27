@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemaView xmlns="http://www.axway.com/mappingServices/schemaView" identifierQuoteString="&quot;" stringFunctions="USER" connection="oracle_sinacofi" numericFunctions="ABS,ACOS,ASIN,ATAN,ATAN2,CEILING,COS,EXP,FLOOR,LOG,LOG10,MOD,PI,POWER,ROUND,SIGN,SIN,SQRT,TAN,TRUNCATE" timeDateFunctions="CURRENT_DATE,CURRENT_TIMESTAMP,CURDATE,EXTRACT,HOUR,MINUTE,MONTH,SECOND,YEAR">
+   <tables>
+      <table catalog="%" name="TBL_CARATULA_CALCULADA" type="TABLE" schema="ORACLE">
+         <columns>
+            <column typeId="12" name="CORRELATIVO" primaryKeyType="NONE" databaseType="ORACLE" precision="8" typeName="VARCHAR2" tableName="TBL_CARATULA_CALCULADA"/>
+            <column typeId="12" name="ID_CAMPO_VAR" primaryKeyType="NONE" databaseType="ORACLE" precision="26" typeName="VARCHAR2" tableName="TBL_CARATULA_CALCULADA"/>
+            <column typeId="2" name="VALOR_CALCULADO" primaryKeyType="NONE" databaseType="ORACLE" precision="38" nullable="true" typeName="NUMBER" tableName="TBL_CARATULA_CALCULADA"/>
+         </columns>
+      </table>
+   </tables>
+</schemaView>

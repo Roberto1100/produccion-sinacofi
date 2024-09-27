@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="04/06/2024 10:15:44 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D04_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D04_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1405454919" elementPath="/Datos/PAR/">
+         <dmlExpression><![CDATA[%rutConcatenados:="|";
+loop on \Details {
+    if ( countString( %rutConcatenados, "|"&getSubString( this\Contenido, 6, 10)&"|" ) =0 )
+    then {
+        %rutConcatenados:=%rutConcatenados&getSubString(this\Contenido, 6, 10)&"|"
+    }
+};
+countString(%rutConcatenados, "|") -1]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

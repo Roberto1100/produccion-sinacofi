@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 17:49:45 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Datos" hash="-1311734049">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="6" typeId="10" paddingCharElement=" " name="34" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="112232276" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="PA1" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1092621081" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="CG1" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="1953989469" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="CG1_B" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-914928435" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="CG3" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="-32537263" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="CG3_B" paddingPosElement="1" order="7" keepDecimalSeparator="true" encodingElement="iso8859" hash="27673146" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="CG6" paddingPosElement="1" order="8" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1649176928" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="CG8" paddingPosElement="1" order="9" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1526392659" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" paddingCharElement=" " name="CG9" paddingPosElement="1" order="10" keepDecimalSeparator="true" encodingElement="iso8859" hash="1312437522" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" paddingCharElement=" " name="CGA" paddingPosElement="1" order="11" keepDecimalSeparator="true" encodingElement="iso8859" hash="1872572244" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="26/06/2024 17:11:40 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D52_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D52_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)  ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/AKY/">
+         <dmlExpression><![CDATA[%totalAKY:=0;
+%totalAKZ:=0;
+%totalAL0:=0;
+%totalAL1:=0;
+%totalALQ:=0;
+loop on \Details {
+	if ( getSubString( this\Contenido,1,2 )= "01" ) 
+	then {
+  	%totalAKY:=%totalAKY+convertToI( getSubString( this\Contenido, 41, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "02" ) 
+    then {
+  	%totalAKZ:=%totalAKZ+convertToI( getSubString( this\Contenido, 49, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "03" ) 
+    then {
+  	%totalAL0:=%totalAL0+convertToI( getSubString( this\Contenido, 41, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "04" ) 
+    then {
+  	%totalAL1:=%totalAL1+convertToI( getSubString( this\Contenido, 41, 14 ))
+             };
+    if ( getSubString( this\Contenido,1,2 )= "05" ) 
+    then {
+  	%totalALQ:=%totalALQ+convertToI( getSubString( this\Contenido, 51, 14 ))
+             }
+  };
+  %totalAKY]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/AKZ/">
+         <dmlExpression><![CDATA[%totalAKZ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/AL0/">
+         <dmlExpression><![CDATA[%totalAL0]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="469929252" elementPath="/Datos/AL1/">
+         <dmlExpression><![CDATA[%totalAL1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="872241567" elementPath="/Datos/ALQ/">
+         <dmlExpression><![CDATA[%totalALQ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="146585927" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,8,8 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

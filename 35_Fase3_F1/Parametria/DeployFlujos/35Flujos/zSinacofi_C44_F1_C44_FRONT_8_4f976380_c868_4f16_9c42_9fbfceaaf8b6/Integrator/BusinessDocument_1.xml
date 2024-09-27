@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BusinessDocuments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BusinessDocuments.xsd">
+   <BusinessDocument businessDocumentType="Inhouse" dmlCompatibility="2.1" encoding="iso8859" id="5c9869f5-0ef5-4ee5-86c9-f734af6e5774" label="" lastModified="2024-07-31T19:01:42.000Z" name="MAPSERVICE_Sinacofi_C44_F1_C44_FRONT::MAPSERVICE.Sinacofi_C44_F1\ArchivosMomentaneos.C44_Archivo_Datos_Val" xmlVersion="1.0">
+      <Configuration>
+         <decimalSeparator>true</decimalSeparator>
+         <keepPresenceOfPlusSign>false</keepPresenceOfPlusSign>
+         <keepPresenceOfDecimalSeparator>true</keepPresenceOfDecimalSeparator>
+         <keepInputNumberOfFractionDigits>true</keepInputNumberOfFractionDigits>
+         <keepInputNumberOfDateDigits>true</keepInputNumberOfDateDigits>
+         <keepPresenceOfIntegerPlusSign>false</keepPresenceOfIntegerPlusSign>
+      </Configuration>
+      <Properties>
+         <Property name="enableFixedFieldTruncation" value="false"/>
+         <Property name="realFormatBehavior" value="false"/>
+         <Property name="truncate" value="false"/>
+         <Property name="trim" value="none"/>
+         <Property name="decimalChar"/>
+         <Property name="escapeChar"/>
+         <Property name="closeQuote"/>
+         <Property name="openQuote"/>
+         <Property name="leafElmtDelimiterValue"/>
+         <Property name="leafElmtDelimiterType" value="FIXED"/>
+         <Property name="parentElmtDelimiterValue"/>
+         <Property name="parentElmtDelimiterType" value="FIXED"/>
+      </Properties>
+      <Elements>
+         <ParentElement cargoImpEndSepMandatory="false" cargoImpPreSepMandatory="false" delimiterType="implicit" delimiterValue="" elementType="InhouseParent" label="Root" maxCard="1" minCard="0" name="Header" order="1" swiftErrorCode="" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="99999" definitionType="Length" delimiterType="string" delimiterValue="0x0a" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="0" name="Datos" order="2" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="!EOF!" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="true" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <Facet alternativeDelimiterValue=""/>
+         </ParentElement>
+         <ParentElement cargoImpEndSepMandatory="false" cargoImpPreSepMandatory="false" delimiterType="implicit" delimiterValue="" elementType="InhouseParent" label="" maxCard="0" minCard="0" name="Registros" order="3" swiftErrorCode="" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+            <LeafElement cargoImpPreSepMandatory="false" cargoImpReference="" defaultValue="" definition="99999" definitionType="Length" delimiterType="string" delimiterValue="0x0a" dmlClassName="String" elementType="InhouseLeaf" label="" leafElementPhysicalType="string (len)" maxCard="1" minCard="0" name="Contenido" order="4" xmlNamespace="-1" xmlNamespaceParentOrder="-1">
+               <Facet allowDistortion="true" alternativeDelimiterValue="!EOF!" cargoImpPattern="" closeQuote="" cobolDependingOn="-1" cobolDependingOnParentOrder="-1" decimalChar="" decimalSeparator="false" encoding="iso8859" escapeChar="" exponentialChar="" keepInputNumberOfDateDigits="false" keepInputNumberOfFractionDigits="false" keepPresenceOfDecimalSeparator="true" keepPresenceOfPlusSign="false" maxInclusiveValue="false" maxValue="" minInclusiveValue="false" minValue="" nullable="true" openQuote="" paddingChar=" " paddingPos="1" pattern="" signMinusChar="" signMinusPos="0" signPlusChar="" signPlusPos="0" validCharset="">
+                  <Enumerations/>
+               </Facet>
+            </LeafElement>
+            <Facet alternativeDelimiterValue=""/>
+         </ParentElement>
+      </Elements>
+      <CheckConstraints>
+         <CheckConstraint name="InstanciarVariables" order="0">
+            <DmlExpression><![CDATA[%Sinacofi_C44_F1.indice:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), "_"); 
+%Sinacofi_C44_F1.indice2:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_C44_F1.indice + 1);
+%Sinacofi_C44_F1.indice3:= index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_C44_F1.indice2 + 1);
+%Sinacofi_C44_F1.tipoDocumentoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 1, 3 );
+%Sinacofi_C44_F1.correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%Sinacofi_C44_F1.usuarioNAPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), %Sinacofi_C44_F1.indice2 + 1, 255 );
+%Sinacofi_C44_F1.usuarioPrefijo:= getSubString(%Sinacofi_C44_F1.usuarioNAPrefijo, 1, %Sinacofi_C44_F1.indice3 - %Sinacofi_C44_F1.indice2 - 1);
+%Sinacofi_C44_F1.TipoArchivo:= "Archivo de datos";
+ 
+if ( 1=1 ) then
+True]]></DmlExpression>
+            <DmlComment/>
+         </CheckConstraint>
+         <CheckConstraint name="Validation_code65_V1_code75_V12" order="1">
+            <DmlExpression><![CDATA[%Sinacofi_C44_F1.Detalles2:="Lineas: ";
+%Sinacofi_C44_F1.Detalles3:="Lineas: ";
+%Sinacofi_C44_F1.indiceLoop:=1;
+loop on \Registros{
+	%Sinacofi_C44_F1.indiceLoop:= %Sinacofi_C44_F1.indiceLoop + 1;
+	if(Sinacofi_C44_F1.GetLargoRegistroByTD(%Sinacofi_C44_F1.tipoDocumentoPrefijo) <> (length(this\Contenido ) - countString(this\Contenido, "\r") ) and length(%Sinacofi_C44_F1.Detalles2) <800)
+	then{
+			%Sinacofi_C44_F1.Detalles2:=%Sinacofi_C44_F1.Detalles2 & %Sinacofi_C44_F1.indiceLoop & ", "
+		};
+	if( not(getSubString(this\Contenido, 1,2) in ( "01","02")) ) 
+	then{
+		%Sinacofi_C44_F1.Detalles3:=%Sinacofi_C44_F1.Detalles3 & %Sinacofi_C44_F1.indiceLoop & ", "
+	}		
+};
+if ( %Sinacofi_C44_F1.Detalles2<>"Lineas: " )
+    then{
+	%Sinacofi_C44_F1.var_error1:= Sinacofi_C44_F1.InsertErrorTBL(
+				%Sinacofi_C44_F1.correlativoPrefijo,
+				"065", 
+				%Sinacofi_C44_F1.TipoArchivo & "-" & getSubString( %Sinacofi_C44_F1.Detalles2 , 1,length(%Sinacofi_C44_F1.Detalles2) -2),
+				formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+		)
+	 };
+if ( %Sinacofi_C44_F1.Detalles3<>"Lineas: " )
+    then{
+	%Sinacofi_C44_F1.var_error1:= Sinacofi_C44_F1.InsertErrorTBL(
+				%Sinacofi_C44_F1.correlativoPrefijo,
+				"075", 
+				%Sinacofi_C44_F1.TipoArchivo & "-" & getSubString( %Sinacofi_C44_F1.Detalles3 , 1,length(%Sinacofi_C44_F1.Detalles3) -2),
+				formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+		)
+	 };
+True]]></DmlExpression>
+            <DmlComment/>
+         </CheckConstraint>
+         <CheckConstraint name="Validation_code05_V2" order="2">
+            <DmlExpression><![CDATA[%Sinacofi_C44_F1.CodigoError:= "005";
+if(Sinacofi_C44_F1.GetEntidadByCasilla(%Sinacofi_C44_F1.usuarioPrefijo) <> padStringLeft(getSubString(\Header\Datos ,1,3), 4, "0") )
+then
+{ 
+	%Sinacofi_C44_F1.var_error1:= Sinacofi_C44_F1.InsertErrorTBL(
+		%Sinacofi_C44_F1.correlativoPrefijo,
+		%Sinacofi_C44_F1.CodigoError, 
+		%Sinacofi_C44_F1.TipoArchivo, 
+		formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></DmlExpression>
+            <DmlComment/>
+         </CheckConstraint>
+         <CheckConstraint name="Validation_code74_V5" order="3">
+            <DmlExpression><![CDATA[%Sinacofi_C44_F1.CodigoError:= "074";
+if (convertToI(getSubString(\Header\Datos, 7 ,4 )) < 1951
+or convertToI(getSubString(\Header\Datos,11,2)) >12 
+or convertToI(getSubString(\Header\Datos,11,2)) <1)
+then{
+	%Sinacofi_C44_F1.var_error1:= Sinacofi_C44_F1.InsertErrorTBL(
+		%Sinacofi_C44_F1.correlativoPrefijo,
+		%Sinacofi_C44_F1.CodigoError, 
+		%Sinacofi_C44_F1.TipoArchivo ,
+		formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></DmlExpression>
+            <DmlComment/>
+         </CheckConstraint>
+         <CheckConstraint name="Validation_container" order="4">
+            <DmlExpression><![CDATA[if ( %Sinacofi_C44_F1.var_error1 <> "" )
+then{
+	False
+}else{
+	True
+}]]></DmlExpression>
+            <DmlComment/>
+         </CheckConstraint>
+      </CheckConstraints>
+   </BusinessDocument>
+</BusinessDocuments>

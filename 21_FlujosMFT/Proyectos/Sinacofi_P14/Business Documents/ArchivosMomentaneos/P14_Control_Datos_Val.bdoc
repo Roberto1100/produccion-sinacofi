@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="ac9f6858-7478-4b5f-af07-ca8390823f9b" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="23/04/2024 17:06:23 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Header" parentDelimiterElement="3" hash="-1351421091">
+         <cardinality maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="Inicio" leafDelimiterElement="2" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="178590013" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="3" name="Details" parentDelimiterElement="3" hash="-227237823">
+         <cardinality maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="9999" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="Detalles" leafDelimiterElement="2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1742434475" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="5" name="Footer" parentDelimiterElement="3" hash="1963684621">
+         <cardinality maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" alternativeDelimiterValue="!EOF!" paddingCharElement=" " name="Fin" leafDelimiterElement="2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="445297070" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+   <validationRules>
+      <validationRule name="InstanciarVariables">
+         <dmlExpression><![CDATA[%Sinacofi_P14.indice:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), "_");
+%Sinacofi_P14.indice2:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_P14.indice + 1);
+%Sinacofi_P14.indice3:= index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_P14.indice2 + 1);
+%Sinacofi_P14.tipoDocumentoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 1, 3 );
+%Sinacofi_P14.correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%Sinacofi_P14.usuarioNAPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), %Sinacofi_P14.indice2 + 1, 255 );
+%Sinacofi_P14.usuarioPrefijo:= getSubString(%Sinacofi_P14.usuarioNAPrefijo, 1, %Sinacofi_P14.indice3 - %Sinacofi_P14.indice2 - 1);
+%Sinacofi_P14.NombreArchivo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), %Sinacofi_P14.indice3 + 1, length(getAttribute( "B2BXGIReceive_ConsumptionFilename" )) - %Sinacofi_P14.indice3 - 4);
+%Sinacofi_P14.CodigoBanco:= Sinacofi_P14.GetEntidadByCasilla(getSubString(\Details\Detalles, 21, 20) );
+%Sinacofi_P14.TipoArchivo:= "Archivo control de datos";
+if ( 1=1 ) then
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="1" name="ValidationCode07_V6">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "007";
+if((Sinacofi_P14.CountCasillaByCasilla(trimString(getSubString(\Details\Detalles, 21, 20)))) = 0)
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+		%Sinacofi_P14.correlativoPrefijo,
+		%Sinacofi_P14.CodigoError, 
+		%Sinacofi_P14.TipoArchivo, 
+		formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="2" name="ValidationCode06_V7">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "006";
+if((Sinacofi_P14.CountCasillaByCasilla(trimString(getSubString(\Details\Detalles, 41, 20))))= 0)
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="3" name="ValidationCode05_V17">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "005";
+if(trimString(getSubString(\Details\Detalles, 21, 20)) <> %Sinacofi_P14.usuarioPrefijo)
+then
+{
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True
+]]></dmlExpression>
+      </validationRule>
+      <validationRule order="4" name="ValidationCode15_V1">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "015";
+if(trimString(\Header\Inicio ) <> "MENSAJE_CONTROL")
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="5" name="ValidationCode25_V2">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "025";
+if(
+	trimString(\Footer\Fin ) <> "FIN_MENSAJE"
+) then {
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="6" name="ValidationCode04_V9">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "004";
+if ( not( getSubString( \Details\Detalles, 71, 1 ) in ( "F", "V") ) ) 
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="7" name="ValidationCode02_V11">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "002";
+if(getSubString(\Details\Detalles, 82, 1) <> "A")
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="8" name="ValidationCode01_V12">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "001";
+if(getSubString(\Details\Detalles, 83, 1) <> "N")
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo,
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="9" name="ValidationCode03_V10">
+         <dmlExpression><![CDATA[%Sinacofi_P14.CodigoError:= "003";
+%Sinacofi_P14.SizeFile:= Sinacofi_P14.GetTamanoByCorrelativo (%Sinacofi_P14.correlativoPrefijo); 
+if( getSubString( \Details\Detalles, 71, 1 )="F" and 
+convertToI( getSubString( \Details\Detalles, 72, 10 ) ) <> ( %Sinacofi_P14.SizeFile - convertToI( getSubString( \Details\Detalles, 61, 10 ) ) ) / convertToI( getSubString( \Details\Detalles, 61, 10 ) ) 
+or ( getSubString( \Details\Detalles, 71, 1 )="V" and 
+convertToI( getSubString( \Details\Detalles, 72, 10 ) ) <> ( %Sinacofi_P14.SizeFile - convertToI( getSubString( \Details\Detalles, 61, 10 ) ) ) )
+)
+then
+{     
+	%Sinacofi_P14.var_error1:= Sinacofi_P14.InsertErrorTBL(
+	%Sinacofi_P14.correlativoPrefijo,
+	%Sinacofi_P14.CodigoError, 
+	%Sinacofi_P14.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="10" name="validationContainer">
+         <dmlExpression><![CDATA[if (%Sinacofi_P14.var_error1<>"") 
+ then { 
+	false
+		} 
+else 
+True]]></dmlExpression>
+      </validationRule>
+   </validationRules>
+</businessDocument>

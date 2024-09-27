@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="18/07/2024 17:41:26 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D53_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D53_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1695292856" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 8,8 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1169139623" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1469098293" elementPath="/Datos/AJK/">
+         <dmlExpression><![CDATA[%Total_AL2:= 0;
+%Total_AL3:= 0;
+%Total_AL4:= 0;
+%Total_AL5:= 0;
+%Total_AL6:= 0;
+%Total_AL7:= 0;
+%Total_AL8:= 0;
+%Total_AL9:= 0;
+loop on \Details  {
+	%Total_AL2:= %Total_AL2 + convertToI(getSubString(this\Contenido, 51, 14));
+	%Total_AL3:= %Total_AL3 + convertToI(getSubString(this\Contenido, 65, 14));
+	%Total_AL4:= %Total_AL4 + convertToI(getSubString(this\Contenido, 79, 14));
+	%Total_AL5:= %Total_AL5 + convertToI(getSubString(this\Contenido, 103, 14));
+	%Total_AL6:= %Total_AL6 + convertToI(getSubString(this\Contenido, 117, 14));
+	%Total_AL7:= %Total_AL7 + convertToI(getSubString(this\Contenido, 131, 14));
+	%Total_AL8:= %Total_AL8 + convertToI(getSubString(this\Contenido, 145, 14));
+	%Total_AL10:= %Total_AL10 + convertToI(getSubString(this\Contenido, 159, 14));
+	%Total_AL9:= %Total_AL9  + convertToI(getSubString(this\Contenido, 173, 14))
+};
+%Total_AL2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1420774572" elementPath="/Datos/AIY/">
+         <dmlExpression><![CDATA[%Total_AL3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-950164859" elementPath="/Datos/AL4/">
+         <dmlExpression><![CDATA[%Total_AL4]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="628295347" elementPath="/Datos/AL5/">
+         <dmlExpression><![CDATA[%Total_AL5]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="826620082" elementPath="/Datos/AL6/">
+         <dmlExpression><![CDATA[%Total_AL6]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="163688534" elementPath="/Datos/AL7/">
+         <dmlExpression><![CDATA[%Total_AL7]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-385829674" elementPath="/Datos/AL8/">
+         <dmlExpression><![CDATA[%Total_AL8]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-875345667" elementPath="/Datos/AL9/">
+         <dmlExpression><![CDATA[%Total_AL9]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1389264568" elementPath="/Datos/AL10/">
+         <dmlExpression><![CDATA[%Total_AL10]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

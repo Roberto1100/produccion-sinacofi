@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/07/2024 15:04:21 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P71_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P71_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1855361394" elementPath="/PA6/Linea/">
+         <dmlExpression><![CDATA["001"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-352978166" elementPath="/PA6/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1309664384" elementPath="/PA6/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-709569153" elementPath="/PA6/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1027852010" elementPath="/PAO/Linea/">
+         <dmlExpression><![CDATA["002"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1180239880" elementPath="/PAP/Linea/">
+         <dmlExpression><![CDATA["003"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-414565500" elementPath="/PAO/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDC, 5,  index(in4:\Caratula\IDC, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-935261054" elementPath="/PAP/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDD, 5,  index(in4:\Caratula\IDD, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-381571093" elementPath="/PAP/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1252030151" elementPath="/PAO/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1744489578" elementPath="/PAP/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2097080026" elementPath="/PAO/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2057027730" elementPath="/IDE/Linea/">
+         <dmlExpression><![CDATA["004"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1798859206" elementPath="/IDE/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDE, 5,  index(in4:\Caratula\IDE, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="950622056" elementPath="/IDE/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1448937071" elementPath="/IDE/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="776693254" elementPath="/IDF/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2032347350" elementPath="/IDF/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\IDF, 5,  index(in4:\Caratula\IDF, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2139973609" elementPath="/IDF/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1692487018" elementPath="/IDF/Linea/">
+         <dmlExpression><![CDATA["005"]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

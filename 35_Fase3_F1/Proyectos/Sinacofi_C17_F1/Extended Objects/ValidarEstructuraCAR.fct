@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="33471ac7-5872-4709-b75a-0fc814d91ab6">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_VALIDAR_ESTRUCTURA_F1(#correlativo#, #campos#) FROM Dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="10/04/2024 16:11:06 -0400"/>
+   <parameters>
+      <parameter dmlClass="S" name="correlativo" description="label param0"/>
+      <parameter dmlClass="S" name="campos" description="label param1"/>
+   </parameters>
+</customFunction>

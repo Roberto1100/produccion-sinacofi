@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.axway.ms.dml.simulation.ui.MDSimulationLaunchConfigurationType">
+    <booleanAttribute key=".noDeploy" value="false"/>
+    <booleanAttribute key=".noRepositoryContent" value="false"/>
+    <booleanAttribute key=".openOutputCheckbox" value="true"/>
+    <booleanAttribute key=".useDebugMode" value="true"/>
+    <booleanAttribute key="checkInputCheckConstraints" value="false"/>
+    <booleanAttribute key="checkInputFacet" value="false"/>
+    <booleanAttribute key="checkOutputCheckConstraints" value="false"/>
+    <booleanAttribute key="checkOutputFacet" value="false"/>
+    <mapAttribute key="com.axway.ms.dml.simulation.ui.attributeVariables">
+        <mapEntry key="0#ACCEPT_INPUT_DOCUMENTS_WITH_ERRORS#" value="0"/>
+        <mapEntry key="1#ACCEPT_OUTPUT_DOCUMENTS_WITH_ERRORS#" value="0"/>
+    </mapAttribute>
+    <stringAttribute key="com.axway.ms.dml.simulation.ui.bdocInputFilePath" value="C:\Users\olive\Downloads\I10_77777777_I10JAJA.ALGO"/>
+    <mapAttribute key="com.axway.ms.dml.simulation.ui.bdocOutputFilePath">
+        <mapEntry key="Backup" value="/Sinacofi_I10_F1/Testdata/Backup"/>
+        <mapEntry key="Salida" value="/Sinacofi_I10_F1/Testdata/Salida"/>
+    </mapAttribute>
+    <mapAttribute key="com.axway.ms.dml.simulation.ui.channels">
+        <mapEntry key="0#Channel#JDBC#comm_1" value=""/>
+    </mapAttribute>
+    <mapAttribute key="com.axway.ms.dml.simulation.ui.communications">
+        <mapEntry key="0#comm_1#JDBC#oracle_sinacofi" value=""/>
+    </mapAttribute>
+    <stringAttribute key="com.axway.ms.dml.simulation.ui.errorMapWorkspacePath" value=""/>
+    <booleanAttribute key="com.axway.ms.dml.simulation.ui.handleErrorMap" value="false"/>
+    <stringAttribute key="com.axway.ms.dml.simulation.ui.objectWorkspacePath" value="/Sinacofi_I10_F1/Mapping Flows/I10_FRONT.dmlflw"/>
+    <stringAttribute key="com.axway.ms.dml.simulation.ui.simulationTimeout" value="240000"/>
+    <booleanAttribute key="com.axway.ms.dml.simulation.ui.useDefaultErrorMapWorkspacePath" value="true"/>
+    <booleanAttribute key="continueMessageProcessingOnError" value="false"/>
+    <booleanAttribute key="groupAllResultingInstances" value="false"/>
+    <booleanAttribute key="keepExactValue" value="false"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Sinacofi_I10_F1/Mapping Flows/I10_FRONT.dmlflw"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="stopOnFirstInputCheckConstraintsError" value="false"/>
+    <booleanAttribute key="stopOnFirstInputFacetCheckError" value="false"/>
+    <booleanAttribute key="stopOnFirstOutputCheckConstraintsError" value="false"/>
+    <booleanAttribute key="stopOnFirstOutputFacetCheckError" value="false"/>
+</launchConfiguration>

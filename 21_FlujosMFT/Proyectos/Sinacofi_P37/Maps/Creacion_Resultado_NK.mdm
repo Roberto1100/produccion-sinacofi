@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="0ec8f17a-d821-4f65-8563-7046f3f4c256">
+   <signature appVersion="3.1.2" lastUpdatedOn="01/03/2024 17:21:59 -0300"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Mensajeria/Resultado.bdoc" alias="out"/>
+   <mapElements>
+      <mapElement elementHash="2079837718" elementPath="/Fin/Fin_Mensaje/">
+         <dmlExpression><![CDATA["FIN_MENSAJE"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1124200601" elementPath="/Inicio/Mensaje_Resultado/">
+         <dmlExpression><![CDATA["MENSAJE_RESULTADO"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1889440342" elementPath="/Details/NA_y_Codigo/">
+         <dmlExpression><![CDATA[padStringRight(%NombreArchivo, 20,  " ")&"NK"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1231048302" elementPath="/Details/Glosa/">
+         <dmlExpression><![CDATA[if( (%Sinacofi_P37.var_error1 <> "OK"))then{
+		%Sinacofi_P37.glosa:= "Error Interno"
+	} else {
+		%Sinacofi_P37.glosa:= "Detalles con los errores ver en sitio web"
+	};
+%Sinacofi_P37.glosa]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

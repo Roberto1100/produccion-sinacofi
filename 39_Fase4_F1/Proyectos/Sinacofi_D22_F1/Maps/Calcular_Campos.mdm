@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="26/08/2024 10:22:13 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D22_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D22_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1695292856" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1469098293" elementPath="/Datos/PA9/">
+         <dmlExpression><![CDATA[%Total_LSA:= 0;
+%Total_LS0:=0;
+loop on \Details  {
+	%Total_LS0:= %Total_LS0 + convertToI(getSubString(this\Contenido, 31, 12));
+	%Total_LSA:= %Total_LSA + convertToI(getSubString(this\Contenido, 58, 12))
+};
+%Total_LS0]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1169139623" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count( \Details )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/LS9/">
+         <dmlExpression><![CDATA[%bienesConcatenados:="|";
+loop on \Details {
+    if ( countString( %bienesConcatenados, "|"&getSubString( this\Contenido, 1, 30)&"|" ) =0 )
+    then {
+        %bienesConcatenados:=%bienesConcatenados&getSubString(this\Contenido, 1, 30)&"|"
+    }
+};
+countString(%bienesConcatenados, "|") -1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="897165447" elementPath="/Datos/LSA/">
+         <dmlExpression><![CDATA[%Total_LSA ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="398545aa-45ab-40ef-9dcb-ae84156a384d">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_BUSCAR_TAMANO_ARCHIVO (#correlativo#)  from dual ]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="21/12/2023 09:34:10 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="correlativo" description="label param0"/>
+   </parameters>
+</customFunction>

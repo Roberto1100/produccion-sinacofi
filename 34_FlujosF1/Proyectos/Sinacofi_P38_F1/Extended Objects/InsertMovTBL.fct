@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CARGAMOVIMIENTO (#correlativo#, #archivoSalida#, #registros#,#destino#,#estado#,#fecha#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="18/04/2024 12:03:16 -0400"/>
+   <parameters>
+      <parameter dmlClass="S" name="correlativo" description="label param0"/>
+      <parameter dmlClass="S" name="archivoSalida" description="label param1"/>
+      <parameter dmlClass="I" name="registros" description="label param2"/>
+      <parameter dmlClass="S" name="destino" description="label param3"/>
+      <parameter dmlClass="S" name="estado" description="label param4"/>
+      <parameter dmlClass="S" name="fecha" description="label param5"/>
+   </parameters>
+</customFunction>

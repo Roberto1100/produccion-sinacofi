@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="ac9f6858-7478-4b5f-af07-ca8390823f9b" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="28/03/2024 10:54:16 -0300"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Header" parentDelimiterElement="3" hash="-1351421091">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="Inicio" leafDelimiterElement="2" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="178590013" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="3" name="Details" parentDelimiterElement="3" hash="-227237823">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="99999" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="Detalles" leafDelimiterElement="2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1742434475" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="5" name="Footer" parentDelimiterElement="3" hash="1963684621">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" alternativeDelimiterValue="!EOF!" paddingCharElement=" " name="Fin" leafDelimiterElement="2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="445297070" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

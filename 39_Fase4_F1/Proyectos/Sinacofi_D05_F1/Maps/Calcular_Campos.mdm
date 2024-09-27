@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="13/08/2024 17:21:04 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D05_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D05_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/PAA/">
+         <dmlExpression><![CDATA[%totalDI0:=0; 
+%totalDI1:=0;
+%totalDI4:=0;
+loop on \Details {
+	  	%totalDI0:=%totalDI0+convertToI( getSubString( this\Contenido, 157, 14 )); 
+ 	  	%totalDI1:=%totalDI1+convertToI( getSubString( this\Contenido, 171, 14 ))+convertToI( getSubString( this\Contenido, 185, 14 ))+convertToI( getSubString( this\Contenido, 199, 14 ))+convertToI( getSubString( this\Contenido, 213, 14 ))+convertToI( getSubString( this\Contenido, 227, 14 ))+convertToI( getSubString( this\Contenido, 241, 14 ))+convertToI( getSubString( this\Contenido, 255, 14 ))+convertToI( getSubString( this\Contenido, 269, 14 ))+convertToI( getSubString( this\Contenido, 283, 14 ));
+ 	  	%totalDI4:=%totalDI4+convertToI( getSubString( this\Contenido, 297, 14 ))
+  };
+  %totalDI0]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/PAC/">
+         <dmlExpression><![CDATA[%totalDI4]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/DI1/">
+         <dmlExpression><![CDATA[%totalDI1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1875777714" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString(in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="4a64ee11-7804-4a60-8760-f8e5b6ea38d3" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="15/11/2023 11:05:31 -0300"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" label="Root" name="Root" hash="-2811570">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" paddingCharElement=" " name="Error" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-581116573" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

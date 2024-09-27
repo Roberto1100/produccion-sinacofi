@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="05c7e882-12f2-4c19-9cf1-ebdb9bde1650" label="" lastModified="2024-04-25T16:51:35.000Z" name="MAPSERVICE_Sinacofi_I05_I05_FT3::MAPSERVICE.Sinacofi_I05.Main_Block_Evento_2" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="7422d2f4-35a3-4ffb-938f-240200fa7981">
+                  <name>MAPSERVICE_Sinacofi_I05_I05_FT3::MAPSERVICE.Sinacofi_I05\Mensajeria.Resultado</name>
+                  <lastModified>2024-04-25T15:51:58.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in1</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepIf>
+               <DmlExpression><![CDATA[countString(%Sinacofi_I05.debug, "IO Error: The Network Adapter could not establish the connection") = 0]]></DmlExpression>
+               <StepStep>
+                  <DmlExpression><![CDATA[if( (%Sinacofi_I05.var_error1 <> "OK"))then{
+		%Sinacofi_I05.var_error1:=Sinacofi_I05.InsertErrorTBL(
+			%Sinacofi_I05.correlativoPrefijo,
+			"000", 
+			"Error Interno: "&getSubString(%Sinacofi_I05.debug, 1, 4000), 
+			formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+		)
+};
+%Sinacofi_I05.var_error1:= Sinacofi_I05.InsertMovTBL(%Sinacofi_I05.correlativoPrefijo, null, %Sinacofi_I05.var_registro1, null, "00", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+]]></DmlExpression>
+               </StepStep>
+            </StepIf>
+            <StepOutput>
+               <OutputName>out</OutputName>
+               <InputBusinessDocumentAlias>in1</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepStep>
+               <DmlExpression><![CDATA[setDocumentAttributeToOutput( "out",  "B2BXGISend_ProductionFilename",  %Sinacofi_I05.correlativoPrefijo + "_" + %Sinacofi_I05.usuarioPrefijo&"_"&%Sinacofi_I05.NombreArchivo&".RES")]]></DmlExpression>
+            </StepStep>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

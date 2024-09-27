@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="13/05/2024 12:46:42 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="PA1" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="504571119">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="1399324042" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="368815714" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-76767628" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1497057637" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="I" id="5e0e28f3-aa92-4c9e-92b4-fc75fadb3a3e">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+ select FUNC_BUSCAR_LARGO_REGISTRO (#TD#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="22/12/2023 15:25:20 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="TD" description="label param0"/>
+   </parameters>
+</customFunction>

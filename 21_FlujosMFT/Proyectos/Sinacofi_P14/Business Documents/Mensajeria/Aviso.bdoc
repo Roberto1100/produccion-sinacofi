@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="7422d2f4-35a3-4ffb-938f-240200fa7981" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="26/12/2023 11:44:58 -0300"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" label="Root" name="Inicio" parentDelimiterElement="3" hash="-1989761325">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" paddingCharElement=" " name="Mensaje_Resultado" defaultValue="MENSAJE_RESULTADO" leafDelimiterElement="2" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="1124200601" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="3" name="Details" parentDelimiterElement="3" hash="-2111328946">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="40" typeId="10" leafDelimiterElementValue="0x0a" paddingCharElement=" " name="NA_y_Originador" leafDelimiterElement="2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1889440342" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="5" name="Fin" parentDelimiterElement="3" hash="-190462820">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" paddingCharElement=" " name="Fin_Mensaje" defaultValue="FIN_MENSAJE" leafDelimiterElement="2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="2079837718" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

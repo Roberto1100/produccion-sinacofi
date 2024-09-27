@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="30/05/2024 09:49:42 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P21_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P21_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%total_PBF:= 0;
+%total_PBG:= 0;
+%comunasConcatenadas:="|";
+loop on \Details {
+	if ( countString( %comunasConcatenadas, "|"&getSubString( this\Contenido, 4, 6)&"|" ) =0 )
+	then {
+		%comunasConcatenadas:=%comunasConcatenadas&getSubString(this\Contenido, 4, 6)&"|"
+	};
+	%total_PBF:= %total_PBF + convertToI(getSubString(this\Contenido, 11, 6))  + convertToI(getSubString(this\Contenido, 17, 6)) + convertToI(getSubString(this\Contenido, 23, 6)) + convertToI(getSubString(this\Contenido, 29, 6))+ convertToI(getSubString(this\Contenido, 35, 6));
+	%total_PBG:= %total_PBG + convertToI(getSubString(this\Contenido, 41, 14)) + convertToI(getSubString(this\Contenido, 55, 14)) + convertToI(getSubString(this\Contenido, 69, 14)) + convertToI(getSubString(this\Contenido, 83, 14)) + convertToI(getSubString(this\Contenido, 97, 14))
+};
+countString(%comunasConcatenadas, "|") -1 ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/ID8/">
+         <dmlExpression><![CDATA[%total_PBF]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%total_PBG]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1060049362" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

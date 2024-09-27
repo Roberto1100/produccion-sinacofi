@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="17/07/2024 12:40:40 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D33_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D33_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="962302456" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString(in:\Header\Datos,7,8 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/AIXR2/">
+         <dmlExpression><![CDATA[%totalAIXR2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/AIXR3/">
+         <dmlExpression><![CDATA[%totalAIXR3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-525000875" elementPath="/Datos/AIZR1/">
+         <dmlExpression><![CDATA[%totalAIZR1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1600260372" elementPath="/Datos/AIZR2/">
+         <dmlExpression><![CDATA[%totalAIZR2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1607639263" elementPath="/Datos/AIZR3/">
+         <dmlExpression><![CDATA[%totalAIZR3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1857844453" elementPath="/Datos/AIXS1/">
+         <dmlExpression><![CDATA[%totalAIXS1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2139845400" elementPath="/Datos/AIXS2/">
+         <dmlExpression><![CDATA[%totalAIXS2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="184950776" elementPath="/Datos/AIXS3/">
+         <dmlExpression><![CDATA[%totalAIXS3	]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1786516669" elementPath="/Datos/AIZS1/">
+         <dmlExpression><![CDATA[%totalAIZS1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="588002816" elementPath="/Datos/AIZS2/">
+         <dmlExpression><![CDATA[%totalAIZS2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="128835907" elementPath="/Datos/AIZS3/">
+         <dmlExpression><![CDATA[%totalAIZS3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-295160262" elementPath="/Datos/AIXT1/">
+         <dmlExpression><![CDATA[%totalAIXT1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="238575203" elementPath="/Datos/AIXT2/">
+         <dmlExpression><![CDATA[%totalAIXT2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2104207037" elementPath="/Datos/AIXT3/">
+         <dmlExpression><![CDATA[%totalAIXT3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2050862561" elementPath="/Datos/AIZT1/">
+         <dmlExpression><![CDATA[%totalAIZT1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1083172838" elementPath="/Datos/AIZT2/">
+         <dmlExpression><![CDATA[%totalAIZT2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="814996668" elementPath="/Datos/AIZT3/">
+         <dmlExpression><![CDATA[%totalAIZT3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1914884930" elementPath="/Datos/AIXU2/">
+         <dmlExpression><![CDATA[%totalAIXU2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1433839182" elementPath="/Datos/AIXU3/">
+         <dmlExpression><![CDATA[%totalAIXU3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1244926389" elementPath="/Datos/AIZU1/">
+         <dmlExpression><![CDATA[%totalAIZU1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1815287709" elementPath="/Datos/AIZU2/">
+         <dmlExpression><![CDATA[%totalAIZU2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1410947233" elementPath="/Datos/AIZU3/">
+         <dmlExpression><![CDATA[%totalAIZU3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1337093510" elementPath="/Datos/AIXV1/">
+         <dmlExpression><![CDATA[%totalAIXV1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2146119478" elementPath="/Datos/AIXV2/">
+         <dmlExpression><![CDATA[%totalAIXV2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-294684074" elementPath="/Datos/AIXV3/">
+         <dmlExpression><![CDATA[%totalAIXV3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="337749834" elementPath="/Datos/AIZV1/">
+         <dmlExpression><![CDATA[%totalAIZV1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1147503593" elementPath="/Datos/AIZV2/">
+         <dmlExpression><![CDATA[%totalAIZV2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="132132565" elementPath="/Datos/AIZV3/">
+         <dmlExpression><![CDATA[%totalAIZV3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="353824382" elementPath="/Datos/AIXW1/">
+         <dmlExpression><![CDATA[%totalAIXW1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="272749614" elementPath="/Datos/AIXW2/">
+         <dmlExpression><![CDATA[%totalAIXW2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1786317216" elementPath="/Datos/AIXW3/">
+         <dmlExpression><![CDATA[%totalAIXW3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-937967395" elementPath="/Datos/AIZW1/">
+         <dmlExpression><![CDATA[%totalAIZW1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-788483395" elementPath="/Datos/AIZW2/">
+         <dmlExpression><![CDATA[%totalAIZW2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-735737002" elementPath="/Datos/AIZW3/">
+         <dmlExpression><![CDATA[%totalAIZW3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/AIXR1/">
+         <dmlExpression><![CDATA[%totalAIXR1:=0;
+%totalAIXR2:=0;
+%totalAIXR3:=0;
+%totalAIZR1:=0;
+%totalAIZR2:=0;
+%totalAIZR3:=0;
+%totalAIXS1:=0;
+%totalAIXS2:=0;
+%totalAIXS3:=0;
+%totalAIZS1:=0;
+%totalAIZS2:=0;
+%totalAIZS3:=0;
+%totalAIXT1:=0;
+%totalAIXT2:=0;
+%totalAIXT3:=0;
+%totalAIZT1:=0;
+%totalAIZT2:=0; 
+%totalAIZT3:=0;
+loop on \Details {
+    if ( getSubString(this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="11") 
+    then {
+  	%totalAIXR1:=%totalAIXR1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="11") then {
+  	%totalAIXR2:=%totalAIXR2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="11") then {
+  	%totalAIXR3:=%totalAIXR3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="11") then {
+  	%totalAIZR1:=%totalAIZR1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+        if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="11") then {
+  	%totalAIZR2:=%totalAIZR2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+            if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="11") then {
+  	%totalAIZR3:=%totalAIZR3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+       if ( getSubString( this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="12") then {
+  	%totalAIXS1:=%totalAIXS1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+        if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="12") then {
+  	%totalAIXS2:=%totalAIXS2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+         if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="12") then {
+  	%totalAIXS3:=%totalAIXS3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="12") then {
+  	%totalAIZS1:=%totalAIZS1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="12") then {
+  	%totalAIZS2:=%totalAIZS2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };	
+    if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="12") 
+    then {
+  	%totalAIZS3:=%totalAIZS3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIXT1:=%totalAIXT1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIXT2:=%totalAIXT2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+       if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIXT3:=%totalAIXT3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    	       if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIZT1:= %totalAIZT1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    	       if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIZT2:= %totalAIZT2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    	       if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="13") then {
+  	%totalAIZT3:= %totalAIZT3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    }   
+};
+%totalAIXR1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2087176846" elementPath="/Datos/AIXU1/">
+         <dmlExpression><![CDATA[%totalAIXU1:=0;
+%totalAIXU2:=0;
+%totalAIXU3:=0;
+%totalAIZU1:=0;
+%totalAIZU2:=0;
+%totalAIZU3:=0;
+%totalAIXV1:=0;
+%totalAIXV2:=0;
+%totalAIXV3:=0;
+%totalAIZV1:=0;
+%totalAIZV2:=0;
+%totalAIZV3:=0;
+%totalAIXW1:=0;
+%totalAIXW2:=0;
+%totalAIXW3:=0;
+%totalAIZW1:=0;
+%totalAIZW2:=0;
+%totalAIZW3:=0;
+loop on \Details {
+          	       if ( getSubString( this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="24") 
+          	       then {
+  	%totalAIXU1:= %totalAIXU1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="24") 
+                then {
+  	%totalAIXU2:= %totalAIXU2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="24") then {
+  	%totalAIXU3:= %totalAIXU3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="24") then {
+  	%totalAIZU1:= %totalAIZU1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="24") then {
+  	%totalAIZU2:= %totalAIZU2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+   if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="24") then {
+  	%totalAIZU3:= %totalAIZU3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+     if ( getSubString( this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIXV1:= %totalAIXV1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIXV2:= %totalAIXV2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIXV3:= %totalAIXV3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+    if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIZV1:= %totalAIZV1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+   if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIZV2:= %totalAIZV2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+   if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="25") then {
+  	%totalAIZV3:= %totalAIZV3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+  if ( getSubString( this\Contenido,9,3) ="001" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIXW1:= %totalAIXW1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+  if ( getSubString( this\Contenido,9,3) ="003" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIXW2:= %totalAIXW2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+  if ( getSubString( this\Contenido,9,3) ="004" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIXW3:= %totalAIXW3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+  if ( getSubString( this\Contenido,9,3) ="005" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIZW1:= %totalAIZW1+convertToI( getSubString( this\Contenido, 47, 14 ))
+    }; 
+  if ( getSubString( this\Contenido,9,3) ="006" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIZW2:= %totalAIZW2+convertToI( getSubString( this\Contenido, 47, 14 ))
+    };
+if ( getSubString( this\Contenido,9,3) ="007" and getSubString( this\Contenido,12,2) ="26") then {
+  	%totalAIZW3:= %totalAIZW3+convertToI( getSubString( this\Contenido, 47, 14 ))
+    }
+    };
+%totalAIXU1]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

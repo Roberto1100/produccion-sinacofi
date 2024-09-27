@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/07/2024 16:28:34 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Salida" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="504571119">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="S_HEAD" defaultValue="T" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1855361394" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PA1" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-709569153" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PA2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-352978166" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PA3" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-106249703" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="PA4" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="61437346" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="S_FOOT" defaultValue="FFFFFFFFFFFFFFF" paddingPosElement="1" order="7" keepDecimalSeparator="true" encodingElement="iso8859" hash="1309664384" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

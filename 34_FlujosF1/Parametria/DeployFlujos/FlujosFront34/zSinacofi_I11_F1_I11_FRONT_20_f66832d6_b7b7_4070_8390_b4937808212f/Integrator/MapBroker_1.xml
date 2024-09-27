@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="02a18ed3-71eb-431e-a139-72784f94f3c4" label="" lastModified="2024-05-29T18:08:02.000Z" name="MAPSERVICE_Sinacofi_I11_F1_I11_FRONT::MAPSERVICE.Sinacofi_I11_F1.Validar_Datos" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="5c9869f5-0ef5-4ee5-86c9-f734af6e5774">
+                  <name>MAPSERVICE_Sinacofi_I11_F1_I11_FRONT::MAPSERVICE.Sinacofi_I11_F1\ArchivosMomentaneos.I11_Archivo_Datos_Val</name>
+                  <lastModified>2024-07-31T18:50:40.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepMappingRule>
+               <MappingRule id="f6a10238-f643-42a4-ab0a-251f445dcbaf" label="" lastModified="2024-07-31T18:50:40.000Z" name="MAPSERVICE_Sinacofi_I11_F1_I11_FRONT::MAPSERVICE.Sinacofi_I11_F1.ArchivoDatosVal_A_ArchivoDatos_FRONT:ArchivoDatosVal_A_ArchivoDatos_FRONT" xmlVersion="1.0">
+                  <OutputBusinessDocument id="5a26c413-5426-4534-8607-9d23965d6be1">
+                     <name>MAPSERVICE_Sinacofi_I11_F1_I11_FRONT::MAPSERVICE.Sinacofi_I11_F1\ArchivosEntrada.I11_Archivo_Datos</name>
+                     <lastModified>2024-07-31T18:50:40.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="3">
+                     <Expression>
+                        <DmlExpression><![CDATA[for each in:\Registros]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[this\Contenido]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Header\Datos]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepStep>
+               <DmlExpression><![CDATA[if %var_error1 = "" then {
+	%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+	%MovimientoProcesado:=InsertMovTBL(%correlativoPrefijo, null , count(in:\Registros), null, "30", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+}]]></DmlExpression>
+            </StepStep>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

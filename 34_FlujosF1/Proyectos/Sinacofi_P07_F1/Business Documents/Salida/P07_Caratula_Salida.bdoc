@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 12:42:29 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Datos" hash="-1311734049">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="6" typeId="10" paddingCharElement=" " name="34" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1763084565" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PA1" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1092621081" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PA2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="1953989469" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="8" typeId="10" paddingCharElement=" " name="PG1" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-914928435" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="PG2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="-32537263" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

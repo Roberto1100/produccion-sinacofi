@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="1df679c6-3703-4e7b-8048-96f9b40277f5" label="" lastModified="2024-04-18T16:43:13.000Z" name="MAPSERVICE_Sinacofi_D55_D55_FT3::MAPSERVICE.Sinacofi_D55.Main_Block_Validacion_2" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="fec8e594-9782-4831-af7e-6f7245a4cda4">
+                  <name>MAPSERVICE_Sinacofi_D55_D55_FT3::MAPSERVICE.Sinacofi_D55\ArchivosMomentaneos.D55_CAR_Val</name>
+                  <lastModified>2024-06-04T15:48:24.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepMappingRule>
+               <MappingRule id="0516c165-3702-4f3d-9d96-de3dbd5f82ec" label="" lastModified="2024-06-04T15:48:24.000Z" name="MAPSERVICE_Sinacofi_D55_D55_FT3::MAPSERVICE.Sinacofi_D55.D55_CarVal_a_Car:D55_CarVal_a_Car" xmlVersion="1.0">
+                  <OutputBusinessDocument id="fec8e594-9782-4831-af7e-6f7245a4cda4">
+                     <name>MAPSERVICE_Sinacofi_D55_D55_FT3::MAPSERVICE.Sinacofi_D55\ArchivosEntrada.D55_CAR</name>
+                     <lastModified>2024-06-04T15:48:24.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\ORG]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="3">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\NMS]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\IDU]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="5">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\FGB]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="6">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\HGB]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="7">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\MSG]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="8">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\PRI]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="9">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\TID]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="10">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\NSE]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="11">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\FEN]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="12">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\HEN]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="13">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\G01]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="15">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\!20!]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="16">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\!34!]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="17">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\PA1]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="22">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\!79!]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="23">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\FIN]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="14">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\!18!]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="18">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\AJB]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="19">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\AJC]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="20">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\AJD]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="21">
+                     <Expression>
+                        <DmlExpression><![CDATA[in:\Caratula\AJX]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepOutput>
+               <OutputName>out1</OutputName>
+               <InputBusinessDocumentAlias>in</InputBusinessDocumentAlias>
+            </StepOutput>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

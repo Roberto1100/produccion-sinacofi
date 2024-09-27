@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="fec8e594-9782-4831-af7e-6f7245a4cda4" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/07/2024 17:40:55 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" label="Root" name="Caratula" parentDelimiterElement="3" hash="-2069903362">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="ORG" leafDelimiterElement="2" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1582944942" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="NMS" leafDelimiterElement="2" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-89559001" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="IDU" leafDelimiterElement="2" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2089822173" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="FGB" leafDelimiterElement="2" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2069391459" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="HGB" leafDelimiterElement="2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2050683779" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="MSG" leafDelimiterElement="2" paddingPosElement="1" order="7" keepDecimalSeparator="true" encodingElement="iso8859" hash="1225018204" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="PRI" leafDelimiterElement="2" paddingPosElement="1" order="8" keepDecimalSeparator="true" encodingElement="iso8859" hash="911785351" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="TID" leafDelimiterElement="2" paddingPosElement="1" order="9" keepDecimalSeparator="true" encodingElement="iso8859" hash="-849446173" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="NSE" leafDelimiterElement="2" paddingPosElement="1" order="10" keepDecimalSeparator="true" encodingElement="iso8859" hash="-480340624" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="FEN" leafDelimiterElement="2" paddingPosElement="1" order="11" keepDecimalSeparator="true" encodingElement="iso8859" hash="1025989394" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="HEN" leafDelimiterElement="2" paddingPosElement="1" order="12" keepDecimalSeparator="true" encodingElement="iso8859" hash="-851475975" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="G01" leafDelimiterElement="2" paddingPosElement="1" order="13" keepDecimalSeparator="true" encodingElement="iso8859" label="Datos de Control de Transferencia" hash="-931508233" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="18" leafDelimiterElement="2" paddingPosElement="1" order="14" keepDecimalSeparator="true" encodingElement="iso8859" label="Nombre y Telefono Responsables firmados" hash="-1753388169" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="20" leafDelimiterElement="2" paddingPosElement="1" order="15" keepDecimalSeparator="true" encodingElement="iso8859" label="Nuestra Referencia" hash="-1725230224" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="34" leafDelimiterElement="2" paddingPosElement="1" order="16" keepDecimalSeparator="true" encodingElement="iso8859" label="Fecha Validez Datos" hash="1216588302" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="PA1" leafDelimiterElement="2" paddingPosElement="1" order="17" keepDecimalSeparator="true" encodingElement="iso8859" label="Numero de Registros Informados" hash="-1472638690" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="PA5" leafDelimiterElement="2" paddingPosElement="1" order="18" keepDecimalSeparator="true" encodingElement="iso8859" hash="303269846" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="PX3" leafDelimiterElement="2" paddingPosElement="1" order="19" keepDecimalSeparator="true" encodingElement="iso8859" hash="1456086915" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="79" leafDelimiterElement="2" paddingPosElement="1" order="20" keepDecimalSeparator="true" encodingElement="iso8859" label="Observaciones" hash="-1717432594" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="255" typeId="10" leafDelimiterElementValue="0x0a" nullable="true" paddingCharElement=" " name="FIN" leafDelimiterElement="2" paddingPosElement="1" order="21" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2109514769" allowDistortion="true">
+               <cardinality maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+   <validationRules>
+      <validationRule name="InstanciarVariables">
+         <dmlExpression><![CDATA[%Sinacofi_P15.indice:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), "_");
+%Sinacofi_P15.indice2:=index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_P15.indice + 1);
+%Sinacofi_P15.indice3:= index(getAttribute( "B2BXGIReceive_ConsumptionFilename"), "_", %Sinacofi_P15.indice2 + 1);
+%Sinacofi_P15.tipoDocumentoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 1, 3 );
+%Sinacofi_P15.correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%Sinacofi_P15.usuarioNAPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), %Sinacofi_P15.indice2 + 1, 255 );
+%Sinacofi_P15.usuarioPrefijo:= getSubString(%Sinacofi_P15.usuarioNAPrefijo, 1, %Sinacofi_P15.indice3 - %Sinacofi_P15.indice2 - 1);
+%Sinacofi_P15.NombreArchivo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), %Sinacofi_P15.indice3 + 1, length(getAttribute( "B2BXGIReceive_ConsumptionFilename" )) - %Sinacofi_P15.indice3 - 4);
+%Sinacofi_P15.TipoArchivo:= "Caratula";
+if ( 1=1 ) then 
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="1" name="ValidationCode46_V4">
+         <dmlExpression><![CDATA[%Sinacofi_P15.CodigoError:= "046";
+%Sinacofi_P15.CapturaCampoCar:= convertToI(getSubString(\Caratula\MSG, 5, 3));
+if(%Sinacofi_P15.CapturaCampoCar <> Sinacofi_P15.GetCodigoMSGbyMSG(%Sinacofi_P15.CapturaCampoCar, %Sinacofi_P15.tipoDocumentoPrefijo))
+then
+{     
+	%Sinacofi_P15.var_error1:= Sinacofi_P15.InsertErrorTBL(
+	%Sinacofi_P15.correlativoPrefijo,
+	%Sinacofi_P15.CodigoError, 
+	%Sinacofi_P15.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="2" name="ValidationCode61_V14">
+         <dmlExpression><![CDATA[%Sinacofi_P15.CodigoError:= "061";
+if(getSubString(\Caratula\G01, length(trimStringRight(\Caratula\G01)), 1) <> "}"
+or getSubString(\Caratula\!18!, length(trimStringRight(\Caratula\!18!)), 1)  <> "}"
+or getSubString(\Caratula\!20!, length(trimStringRight(\Caratula\!20!)), 1)  <> "}"
+or getSubString(\Caratula\!34!, length(trimStringRight(\Caratula\!34!)), 1)  <> "}"
+or getSubString(\Caratula\PA1, length(trimStringRight(\Caratula\PA1)), 1)  <> "}"
+or getSubString(\Caratula\PA5, length(trimStringRight(\Caratula\PA5)), 1)  <> "}"
+or getSubString(\Caratula\PX3, length(trimStringRight(\Caratula\PX3)), 1)  <> "}"
+or getSubString(\Caratula\!79!, length(trimStringRight(\Caratula\!79!)), 1)  <> "}"
+)
+then
+{     
+	%Sinacofi_P15.var_error1:= Sinacofi_P15.InsertErrorTBL(
+	%Sinacofi_P15.correlativoPrefijo,
+	%Sinacofi_P15.CodigoError, 
+	%Sinacofi_P15.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="3" name="ValidationCode60_V13">
+         <dmlExpression><![CDATA[%Sinacofi_P15.CodigoError:= "060";
+if(
+countString(\Caratula\G01 , "}") > 1
+or countString(\Caratula\!18! , "}") > 1
+or countString(\Caratula\!20! , "}") > 1
+or countString(\Caratula\!34! , "}") > 1
+or countString(\Caratula\PA1 , "}") > 1
+or countString(\Caratula\PA5 , "}") > 1
+or countString(\Caratula\PX3 , "}") > 1
+or countString(\Caratula\!79! , "}") > 1
+) then {
+	%Sinacofi_P15.var_error1:= Sinacofi_P15.InsertErrorTBL(
+	%Sinacofi_P15.correlativoPrefijo,
+	%Sinacofi_P15.CodigoError, 
+	%Sinacofi_P15.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True
+]]></dmlExpression>
+      </validationRule>
+      <validationRule order="4" name="ValidationContainer1">
+         <dmlExpression><![CDATA[if (%Sinacofi_P15.var_error1<>"") 
+ then { 
+	false
+		} 
+else 
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="5" name="ValidationCode51_V7">
+         <dmlExpression><![CDATA[%Sinacofi_P15.CodigoError:= "051";
+%Sinacofi_P15.CamposConcatenados:=
+trimString ( getSubString(\Caratula\G01 , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\!18! , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\!20! , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\!34! , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\PA1 , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\PA5 , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\PX3 , 1, 3 ) )
+& "|" & trimString ( getSubString(\Caratula\!79! , 1, 3 ) );
+
+%Sinacofi_P15.ValoresConcatenados:="|" &
+trimStringRight ( getSubString(\Caratula\G01 , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\!18! , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\!20! , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\!34! , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\PA1 , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\PA5 , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\PX3 , 5, 255 ) )
+& trimStringRight ( getSubString(\Caratula\!79! , 5, 255 ) );
+
+if( Sinacofi_P15.ValidarLargos( convertToI(%Sinacofi_P15.CapturaCampoCar), %Sinacofi_P15.CamposConcatenados, %Sinacofi_P15.ValoresConcatenados ) = "NK" )
+then
+{     
+	%Sinacofi_P15.var_error1:= Sinacofi_P15.InsertErrorTBL(
+	%Sinacofi_P15.correlativoPrefijo,
+	%Sinacofi_P15.CodigoError, 
+	%Sinacofi_P15.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="6" name="ValidationCode52_V8">
+         <dmlExpression><![CDATA[%Sinacofi_P15.CodigoError:= "052";
+%Sinacofi_P15.indice:= index(\Caratula\!34! , "}");
+%Sinacofi_P15.subCampo34:= getSubString( \Caratula\!34! , 5,  %Sinacofi_P15.indice - 5 );
+%Sinacofi_P15.indice:= index(\Caratula\PA1 , "}");
+%Sinacofi_P15.campoPA1:= getSubString( \Caratula\PA1 , 5,  %Sinacofi_P15.indice - 5);
+%Sinacofi_P15.indice:= index(\Caratula\PA5 , "}");
+%Sinacofi_P15.campoPA5:= getSubString( \Caratula\PA5 , 5,  %Sinacofi_P15.indice - 5);
+%Sinacofi_P15.indice:= index(\Caratula\PX3 , "}");
+%Sinacofi_P15.campoPX3:= getSubString( \Caratula\PX3 , 5,  %Sinacofi_P15.indice - 5);
+if ( convertToI(%Sinacofi_P15.campoPA1 ) = null
+or  convertToI(%Sinacofi_P15.campoPA5 ) = null
+or  convertToI(%Sinacofi_P15.campoPX3 ) = null
+) then {
+	%Sinacofi_P15.var_error1:= Sinacofi_P15.InsertErrorTBL(
+	%Sinacofi_P15.correlativoPrefijo,
+	%Sinacofi_P15.CodigoError, 
+	%Sinacofi_P15.TipoArchivo, 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	)
+};
+True]]></dmlExpression>
+      </validationRule>
+      <validationRule order="7" name="ValidationContainer2">
+         <dmlExpression><![CDATA[if (%Sinacofi_P15.var_error1<>"") 
+ then { 
+	false
+		} 
+else 
+True]]></dmlExpression>
+      </validationRule>
+   </validationRules>
+</businessDocument>

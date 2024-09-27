@@ -1,0 +1,60 @@
+{
+  "username" : "malvarez",
+  "timestamp" : 1727216430388,
+  "objtype" : "metadata-profiles",
+  "encryptPassword" : true,
+  "userExportedData" : false,
+  "content" : {
+  "enabled" : true,
+  "service" : "Service_C45_FT3",
+  "outputs" : [ {
+    "@class" : "DeliverToApplication",
+    "outputName" : "AUX",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  }, {
+    "@class" : "DeliverToApplication",
+    "outputName" : "Buzon",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  }, {
+    "@class" : "DeliverToApplication",
+    "outputName" : "Backup",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  }, {
+    "@class" : "DeliverToApplication",
+    "outputName" : "Salida",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  } ],
+  "criteria" : [ {
+    "metadata" : "Trading Engine: ConsumptionFilename",
+    "condition" : "STARTS_WITH",
+    "value" : "C45"
+  }, {
+    "metadata" : "Trading Engine: PickupName",
+    "condition" : "EQUALS",
+    "value" : "Inbound_FT3"
+  } ],
+  "attributes" : [ ],
+  "@links" : {
+    "service" : [ {
+      "href" : "/api/v2/services/Service_C45_FT3"
+    } ],
+    "communities" : [ {
+      "href" : "/api/v2/communities/FT3"
+    } ]
+  },
+  "@id" : "3356034",
+  "@name" : "MP_C45_FT3"
+}
+}

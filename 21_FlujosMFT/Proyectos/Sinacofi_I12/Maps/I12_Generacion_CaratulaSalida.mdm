@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="53edb52d-f983-43fd-848a-c66140a0bff9">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 17:12:14 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/I12_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/I12_CAR.bdoc" alias="in4"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1855361394" elementPath="/PA6/Linea/">
+         <dmlExpression><![CDATA["001"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-352978166" elementPath="/PA6/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1309664384" elementPath="/PA6/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-709569153" elementPath="/PA6/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1027852010" elementPath="/PAO/Linea/">
+         <dmlExpression><![CDATA["002"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1180239880" elementPath="/PAP/Linea/">
+         <dmlExpression><![CDATA["003"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-414565500" elementPath="/PAO/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PAV, 5,  index(in4:\Caratula\PAV, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-381571093" elementPath="/PAP/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1252030151" elementPath="/PAO/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1744489578" elementPath="/PAP/SignoCampo/">
+         <dmlExpression><![CDATA["+"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2097080026" elementPath="/PAO/ValorDecimal/">
+         <dmlExpression><![CDATA["0000"]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-935261054" elementPath="/AJC/ValorCampo/">
+         <dmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PAW, 5,  index(in4:\Caratula\PAW, "}") - 5), 30, "0")]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

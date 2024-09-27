@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapStages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapStages_1.xsd">
+   <MapStage dmlCompatibility="2.1" id="61d48dc0-c270-4023-97a8-09f35bf50862" label="" lastModified="2024-07-11T18:59:01.000Z" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1" xmlVersion="1.0">
+      <Input id="1206476b-3a52-4661-81da-d7eca8b7fe11" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Input" xmlVersion="1.1">
+         <Properties>
+            <Property name="split" type="String">
+               <SimpleValue>false</SimpleValue>
+            </Property>
+         </Properties>
+      </Input>
+      <Outputs>
+         <Output id="683e50be-8cc4-4e40-b809-7ab9f91540f1" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:SalidaOK" xmlVersion="1.1">
+            <Properties>
+               <Property name="group" type="String">
+                  <SimpleValue>false</SimpleValue>
+               </Property>
+            </Properties>
+         </Output>
+      </Outputs>
+      <DataProcess>
+         <Node id="1" label="" name="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.DestinoEntrada" type="BusinessDocument" x="185.0" xmlVersion="1.0" y="10.0">
+            <Object id="026b5e53-1be7-4ad4-943c-b668418a4de6">
+               <name>MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.DestinoEntrada</name>
+               <lastModified>2024-07-11T18:59:01.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node id="2" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Input" type="Input" x="10.0" xmlVersion="1.0" y="10.0">
+            <Object id="1206476b-3a52-4661-81da-d7eca8b7fe11">
+               <name>MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Input</name>
+            </Object>
+         </Node>
+         <Node id="3" label="" name="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Main_Block_AgregarDestino1" type="MapBroker" x="353.0" xmlVersion="1.0" y="9.0">
+            <Object id="5715a7a3-8318-409a-bdb7-dafe6c718a8f">
+               <name>MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Main_Block_AgregarDestino1</name>
+               <lastModified>2024-07-11T18:59:01.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node id="4" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:SalidaOK" type="Output" x="867.0" xmlVersion="1.0" y="31.0">
+            <Object id="683e50be-8cc4-4e40-b809-7ab9f91540f1">
+               <name>MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:SalidaOK</name>
+            </Object>
+         </Node>
+         <Node id="5" label="" name="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Salida" type="BusinessDocument" x="675.0" xmlVersion="1.0" y="36.0">
+            <Object id="766be135-fdc7-49ea-abcd-485aeffc11d7">
+               <name>MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Salida</name>
+               <lastModified>2024-07-11T18:59:01.000Z</lastModified>
+            </Object>
+         </Node>
+         <Node channelType="SQL" id="6" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Channel" type="Channel" x="180.0" xmlVersion="1.0" y="100.0">
+            <Object id="8db9790b-ddba-429d-af72-d53e8a667087">
+               <name>MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Channel</name>
+               <lastModified>2024-07-11T18:58:38.000Z</lastModified>
+            </Object>
+         </Node>
+         <Link from="2" id="7" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Link1" to="1" xmlVersion="1.0"/>
+         <Link from="1" id="8" label="" name="in1" to="3" xmlVersion="1.0">
+            <Object id="df853bb4-5ac9-4676-be5e-d37417eb50b8">
+               <name>MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:in1</name>
+            </Object>
+         </Link>
+         <Link from="5" id="9" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Link2" to="4" xmlVersion="1.0"/>
+         <Link from="3" id="10" label="" mapBrokerOutput="out" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:out" to="5" xmlVersion="1.0">
+            <Object id="e56f82ef-628c-40df-9b25-095c4018bcc5">
+               <name>MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:out</name>
+            </Object>
+         </Link>
+         <Link from="3" id="11" label="" name="MAPSERVICE.Crear_Caratula_F1.Crear_Caratula_F1:Link1_11" to="6" xmlVersion="1.0">
+            <FunctionList>
+               <Function>MAPSERVICE.Crear_Caratula_F1.GetCaratulaByCorrelativo</Function>
+               <Function>MAPSERVICE.Crear_Caratula_F1.GetLargoCodByCorr</Function>
+               <Function>MAPSERVICE.Crear_Caratula_F1.InsertMovTBL</Function>
+               <Function>MAPSERVICE.Crear_Caratula_F1.GetTDbyCorrelativo</Function>
+               <Function>MAPSERVICE.Crear_Caratula_F1.GetCodInstByCorrelativo</Function>
+               <Function>MAPSERVICE.Crear_Caratula_F1.InsertErrorTBL</Function>
+            </FunctionList>
+         </Link>
+      </DataProcess>
+      <Events/>
+      <DynamicMapBrokers/>
+      <Configuration>
+         <checkInputFacet>true</checkInputFacet>
+         <stopOnFirstInputFacetCheckError>true</stopOnFirstInputFacetCheckError>
+         <checkInputCheckConstraints>false</checkInputCheckConstraints>
+         <stopOnFirstInputCheckConstraintsError>true</stopOnFirstInputCheckConstraintsError>
+         <checkOutputFacet>false</checkOutputFacet>
+         <stopOnFirstOutputFacetCheckError>true</stopOnFirstOutputFacetCheckError>
+         <checkOutputCheckConstraints>false</checkOutputCheckConstraints>
+         <stopOnFirstOutputCheckConstraintsError>true</stopOnFirstOutputCheckConstraintsError>
+         <continueMessageProcessingOnError>false</continueMessageProcessingOnError>
+         <groupAllResultingInstances>false</groupAllResultingInstances>
+         <keepExactValue>false</keepExactValue>
+         <copyAttributes>true</copyAttributes>
+      </Configuration>
+   </MapStage>
+</MapStages>

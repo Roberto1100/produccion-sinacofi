@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="19/07/2024 11:34:45 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D32_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D32_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="962302456" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString(in:\Header\Datos,8,8 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/AIXR2/">
+         <dmlExpression><![CDATA[%totalAN72:=0;
+%totalANJ2:=0;
+%totalANK2:=0;
+%totalANL2:=0;
+%totalANM2:=0;
+%totalANN2:=0;
+%totalAN82:=0;
+%totalAN92:=0;
+%totalANP2:=0;
+%totalANQ2:=0;
+loop on \Details {
+    if ( getSubString(this\Contenido,90,3) ="110") 
+    then {
+      %totalAN72:=%totalAN72+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="111") 
+    then {
+      %totalANJ2:=%totalANJ2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="112") 
+    then {
+      %totalANK2:=%totalANK2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="113") 
+    then {
+      %totalANL2:=%totalANL2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="114") 
+    then {
+      %totalANM2:=%totalANM2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="125") 
+    then {
+      %totalANN2:=%totalANN2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="127") 
+    then {
+      %totalAN82:=%totalAN82+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="128") 
+    then {
+      %totalAN92:=%totalAN92+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+ if ( getSubString(this\Contenido,90,3) ="131") 
+    then {
+      %totalANP2:=%totalANP2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+if ( getSubString(this\Contenido,90,3) ="132") 
+    then {
+      %totalANQ2:=%totalANQ2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            }
+};
+%totalAN72]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/ANJ1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "111"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/AN71/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "110"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1600260372" elementPath="/Datos/ANK1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "112"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-525000875" elementPath="/Datos/ANJ2/">
+         <dmlExpression><![CDATA[%totalANJ2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1607639263" elementPath="/Datos/ANK2/">
+         <dmlExpression><![CDATA[%totalANK2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2139845400" elementPath="/Datos/ANL2/">
+         <dmlExpression><![CDATA[%totalANL2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1786516669" elementPath="/Datos/ANM2/">
+         <dmlExpression><![CDATA[%totalANM2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="128835907" elementPath="/Datos/ANN2/">
+         <dmlExpression><![CDATA[%totalANN2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="238575203" elementPath="/Datos/AN82/">
+         <dmlExpression><![CDATA[%totalAN82]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2050862561" elementPath="/Datos/AN92/">
+         <dmlExpression><![CDATA[%totalAN92]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="814996668" elementPath="/Datos/ANP2/">
+         <dmlExpression><![CDATA[%totalANP2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1914884930" elementPath="/Datos/ANQ2/">
+         <dmlExpression><![CDATA[%totalANQ2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1857844453" elementPath="/Datos/ANL1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "113"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="184950776" elementPath="/Datos/ANM1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "114"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="588002816" elementPath="/Datos/ANN1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "125"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-295160262" elementPath="/Datos/AN81/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "127"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-2104207037" elementPath="/Datos/AN91/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "128"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1083172838" elementPath="/Datos/ANP1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "131"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2087176846" elementPath="/Datos/ANQ1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "132"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1433839182" elementPath="/Datos/ANR1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "133"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1815287709" elementPath="/Datos/ANS1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "134"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1337093510" elementPath="/Datos/ANT1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "141"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-294684074" elementPath="/Datos/ANU1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "151"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1147503593" elementPath="/Datos/ANV1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "152"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="353824382" elementPath="/Datos/AN01/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "153"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1786317216" elementPath="/Datos/ANW1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "161"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-788483395" elementPath="/Datos/ANX1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "162"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="885962516" elementPath="/Datos/ANY1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "163"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1762506050" elementPath="/Datos/ANZ1/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "190"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1244926389" elementPath="/Datos/ANR2/">
+         <dmlExpression><![CDATA[%totalANR2:=0;
+%totalANS2:=0;
+%totalANT2:=0;
+%totalANU2:=0;
+%totalANV2:=0;
+%totalAN02:=0;
+%totalANW2:=0;
+%totalANX2:=0;
+%totalANY2:=0;
+%totalANZ2:=0;
+loop on \Details {
+    if ( getSubString(this\Contenido,90,3) ="133") 
+    then {
+      %totalANR2:=%totalANR2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+  if ( getSubString(this\Contenido,90,3) ="134") 
+    then {
+     %totalANS2:=%totalANS2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="141") 
+    then {
+     %totalANT2:=%totalANT2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            }; 
+    if ( getSubString(this\Contenido,90,3) ="151") 
+    then {
+     %totalANU2:=%totalANU2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	
+    if ( getSubString(this\Contenido,90,3) ="152") 
+    then {
+     %totalANV2:=%totalANV2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };
+    if ( getSubString(this\Contenido,90,3) ="153") 
+    then {
+     %totalAN02:=%totalAN02+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };
+        if ( getSubString(this\Contenido,90,3) ="161") 
+    then {
+     %totalANW2:=%totalANW2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="162") 
+    then {
+     %totalANX2:=%totalANX2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="163") 
+    then {
+      %totalANY2:=%totalANY2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="190") 
+    then {
+      %totalANZ2:=%totalANZ2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            }                   	                                  	       	
+       }; 
+ %totalANR2               ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1410947233" elementPath="/Datos/ANS2/">
+         <dmlExpression><![CDATA[%totalANS2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2146119478" elementPath="/Datos/ANT2/">
+         <dmlExpression><![CDATA[%totalANT2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="337749834" elementPath="/Datos/ANU2/">
+         <dmlExpression><![CDATA[%totalANU2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="132132565" elementPath="/Datos/ANV2/">
+         <dmlExpression><![CDATA[%totalANV2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="272749614" elementPath="/Datos/AN02/">
+         <dmlExpression><![CDATA[%totalAN02]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-937967395" elementPath="/Datos/ANW2/">
+         <dmlExpression><![CDATA[%totalANW2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-735737002" elementPath="/Datos/ANX2/">
+         <dmlExpression><![CDATA[%totalANX2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1063934190" elementPath="/Datos/ANY2/">
+         <dmlExpression><![CDATA[%totalANY2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-332476340" elementPath="/Datos/ANZ2/">
+         <dmlExpression><![CDATA[%totalANZ2]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

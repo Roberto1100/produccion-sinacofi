@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapStageInterface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" mapName="MAPSERVICE.Sinacofi_D41_F1.D41_FRONT" xsi:noNamespaceSchemaLocation="MapStageInterface.xsd">
+   <Input description="" id="b597a79c-7d3b-47b0-b972-e65bc9facfa4" name="Input"/>
+   <Outputs>
+      <Output description="" id="1b1ee5cb-9bbc-4d4c-8c13-ec9075604fb8" name="Backup"/>
+      <Output description="" id="0efec2ae-9ba1-4e25-92c6-2fdb08338c20" name="Salida"/>
+   </Outputs>
+   <Channels>
+      <Channel channelType="SQL" description="" id="b4242f14-a443-4db5-89a2-fbc08d2dd579" name="Channel"/>
+   </Channels>
+</MapStageInterface>

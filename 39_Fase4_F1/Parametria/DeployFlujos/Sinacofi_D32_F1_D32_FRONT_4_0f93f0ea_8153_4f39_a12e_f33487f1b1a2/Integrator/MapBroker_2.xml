@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="cf0945b0-28c2-4639-a6c9-bddbb3e71ab9" label="" lastModified="2024-07-19T15:34:45.000Z" name="MAPSERVICE_Sinacofi_D32_F1_D32_FRONT::MAPSERVICE.Sinacofi_D32_F1.Calcular_Cam" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="5a26c413-5426-4534-8607-9d23965d6be1">
+                  <name>MAPSERVICE_Sinacofi_D32_F1_D32_FRONT::MAPSERVICE.Sinacofi_D32_F1\ArchivosEntrada.D32_Archivo_Datos</name>
+                  <lastModified>2024-08-13T16:25:51.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepMappingRule>
+               <MappingRule id="1cb16b97-c668-4742-bf9c-e7da78efdc15" label="" lastModified="2024-08-13T16:25:51.000Z" name="MAPSERVICE_Sinacofi_D32_F1_D32_FRONT::MAPSERVICE.Sinacofi_D32_F1.Calcular_Campos:Calcular_Campos" xmlVersion="1.0">
+                  <OutputBusinessDocument id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1">
+                     <name>MAPSERVICE_Sinacofi_D32_F1_D32_FRONT::MAPSERVICE.Sinacofi_D32_F1\Salida.D32_Caratula_Salida</name>
+                     <lastModified>2024-08-13T16:25:51.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="3">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details) ]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA[getSubString(in:\Header\Datos,8,8 )]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="5">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalAN72:=0;
+%totalANJ2:=0;
+%totalANK2:=0;
+%totalANL2:=0;
+%totalANM2:=0;
+%totalANN2:=0;
+%totalAN82:=0;
+%totalAN92:=0;
+%totalANP2:=0;
+%totalANQ2:=0;
+loop on \Details {
+    if ( getSubString(this\Contenido,90,3) ="110") 
+    then {
+      %totalAN72:=%totalAN72+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="111") 
+    then {
+      %totalANJ2:=%totalANJ2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="112") 
+    then {
+      %totalANK2:=%totalANK2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="113") 
+    then {
+      %totalANL2:=%totalANL2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="114") 
+    then {
+      %totalANM2:=%totalANM2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+    if ( getSubString(this\Contenido,90,3) ="125") 
+    then {
+      %totalANN2:=%totalANN2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="127") 
+    then {
+      %totalAN82:=%totalAN82+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="128") 
+    then {
+      %totalAN92:=%totalAN92+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+ if ( getSubString(this\Contenido,90,3) ="131") 
+    then {
+      %totalANP2:=%totalANP2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+if ( getSubString(this\Contenido,90,3) ="132") 
+    then {
+      %totalANQ2:=%totalANQ2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            }
+};
+%totalAN72]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="6">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "111"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "110"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="8">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "112"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="7">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANJ2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="9">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANK2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="11">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANL2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="13">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANM2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="15">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANN2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="17">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalAN82]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="19">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalAN92]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="21">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANP2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="23">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANQ2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="10">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "113"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="12">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "114"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="14">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "125"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="16">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "127"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="18">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "128"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="20">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "131"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="22">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "132"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="24">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "133"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="26">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "134"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="28">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "141"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="30">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "151"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="32">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "152"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="34">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "153"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="36">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "161"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="38">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "162"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="40">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "163"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="42">
+                     <Expression>
+                        <DmlExpression><![CDATA[count(\Details[where getSubString(item\Contenido,90,3) = "190"])]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="25">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANR2:=0;
+%totalANS2:=0;
+%totalANT2:=0;
+%totalANU2:=0;
+%totalANV2:=0;
+%totalAN02:=0;
+%totalANW2:=0;
+%totalANX2:=0;
+%totalANY2:=0;
+%totalANZ2:=0;
+loop on \Details {
+    if ( getSubString(this\Contenido,90,3) ="133") 
+    then {
+      %totalANR2:=%totalANR2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+  if ( getSubString(this\Contenido,90,3) ="134") 
+    then {
+     %totalANS2:=%totalANS2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };  
+   if ( getSubString(this\Contenido,90,3) ="141") 
+    then {
+     %totalANT2:=%totalANT2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            }; 
+    if ( getSubString(this\Contenido,90,3) ="151") 
+    then {
+     %totalANU2:=%totalANU2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	
+    if ( getSubString(this\Contenido,90,3) ="152") 
+    then {
+     %totalANV2:=%totalANV2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };
+    if ( getSubString(this\Contenido,90,3) ="153") 
+    then {
+     %totalAN02:=%totalAN02+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };
+        if ( getSubString(this\Contenido,90,3) ="161") 
+    then {
+     %totalANW2:=%totalANW2+convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="162") 
+    then {
+     %totalANX2:=%totalANX2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="163") 
+    then {
+      %totalANY2:=%totalANY2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            };                   	                                  	       	
+       if ( getSubString(this\Contenido,90,3) ="190") 
+    then {
+      %totalANZ2:=%totalANZ2+ convertToI( getSubString( this\Contenido, 54, 14 ))
+            }                   	                                  	       	
+       }; 
+ %totalANR2               ]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="27">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANS2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="29">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANT2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="31">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANU2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="33">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANV2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="35">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalAN02]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="37">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANW2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="39">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANX2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="41">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANY2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="43">
+                     <Expression>
+                        <DmlExpression><![CDATA[%totalANZ2]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepOutput>
+               <OutputName>out1</OutputName>
+               <InputBusinessDocumentAlias>in</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepOutput>
+               <OutputName>out2</OutputName>
+               <InputBusinessDocumentAlias>in</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepStep>
+               <DmlExpression><![CDATA[%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+setDocumentAttributeToOutput( "out1",  "B2BXGISend_ProductionFilename",%correlativoPrefijo &"_datosSalida");
+setDocumentAttributeToOutput( "out2",  "B2BXGISend_ProductionFilename",getSubString(getAttribute("B2BXGIReceive_ConsumptionFilename" ), 5, 255) + getAttribute( "B2BXGIReceive_ConsumptionExtension"))]]></DmlExpression>
+            </StepStep>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

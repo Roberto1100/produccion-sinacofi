@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customFunction xmlns="http://www.axway.com/mappingServices/jdbcCustomFunction" category="SQL" dmlClassReturn="S" id="36e84616-d27c-48f8-a625-a7c75bP349cf">
+   <dmlExpression><![CDATA[/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_OBTENER_CODIGO_INST (#entidad#)  from dual]]></dmlExpression>
+   <signature appVersion="3.1.2" lastUpdatedOn="22/12/2023 17:26:50 -0300"/>
+   <parameters>
+      <parameter dmlClass="S" name="entidad" description="label param0"/>
+   </parameters>
+</customFunction>

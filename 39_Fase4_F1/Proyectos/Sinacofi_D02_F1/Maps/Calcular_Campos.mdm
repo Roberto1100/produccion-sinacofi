@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="27/06/2024 09:11:25 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D02_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D02_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1405454919" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[%rutConcatenados:="|";
+loop on \Details {
+	if ( countString( %rutConcatenados, "|"&getSubString( this\Contenido, 1, 10)&"|" ) =0 )
+	then {
+		%rutConcatenados:=%rutConcatenados&getSubString(this\Contenido, 1, 10)&"|"
+	}
+};
+countString(%rutConcatenados, "|") -1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1678823237" elementPath="/Datos/DB1/">
+         <dmlExpression><![CDATA[count (\Details [where getSubString( item\Contenido, 41, 1) = "D"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1261594452" elementPath="/Datos/DB1_B/">
+         <dmlExpression><![CDATA[count (\Details [where getSubString( item\Contenido, 41, 1) = "I"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-63095091" elementPath="/Datos/DBW/">
+         <dmlExpression><![CDATA[%totalDBW]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1841330748" elementPath="/Datos/DBX/">
+         <dmlExpression><![CDATA[%totalDBX]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="97856333" elementPath="/Datos/DB7/">
+         <dmlExpression><![CDATA[%totalDB7]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1776414611" elementPath="/Datos/DBV/">
+         <dmlExpression><![CDATA[%totalDBV:=0;
+%totalDBW:=0;
+%totalDBX:=0;
+%totalDB7:=0;
+loop on \Details{
+		%totalDBV:= %totalDBV + convertToI(getSubString(this\Contenido, 106,14));
+		%totalDBW:= %totalDBW + convertToI(getSubString(this\Contenido, 120,14));
+		%totalDBX:= %totalDBX + convertToI(getSubString(this\Contenido, 134, 14));
+		%totalDB7:= %totalDB7 + convertToI(getSubString(this\Contenido, 162, 14))
+};
+%totalDBV]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-480013800" elementPath="/Datos/DB1_C/">
+         <dmlExpression><![CDATA[count (\Details [where getSubString( item\Contenido, 41, 1) = "C"])]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

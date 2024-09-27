@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 16:58:13 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P41_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P41_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count( \Details )
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%totalDBY:=0;
+%totalDBZ:=0;
+%totalDBS:=0;
+%totalDCP:=0;
+loop on \Details {
+	if ( getSubString( this\Contenido, 1, 2 ) = "01" ) then {
+		%totalDBY:=%totalDBY + convertToI( getSubString( this\Contenido, 7, 10 ) );
+		%totalDBZ:=%totalDBZ + convertToI( getSubString( this\Contenido, 27, 10 ) )
+  	};
+  	if ( getSubString( this\Contenido, 1, 2 ) = "02" ) then {
+		%totalDBS:=%totalDBS + convertToI( getSubString( this\Contenido, 8, 12 ) );
+		%totalDCP:=%totalDCP + convertToI( getSubString( this\Contenido, 34, 14 ) )
+  	}
+};
+%totalDBY]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%totalDBS]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[%totalDCP]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PB6/">
+         <dmlExpression><![CDATA[%totalDBZ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1172170949" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="22/07/2024 17:15:26 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D27_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D27_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1695292856" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,8 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1169139623" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/CFO/">
+         <dmlExpression><![CDATA[%Total_AJL]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1469098293" elementPath="/Datos/AJK/">
+         <dmlExpression><![CDATA[%Total_AJL:=0;
+%Total_AJK:=0;
+loop on \Details  {
+	if( getSubString( this\Contenido, 62,1) = "0" )
+	then{
+		%Total_AJK:= %Total_AJK + convertToI(getSubString(this\Contenido, 63, 14))
+	};
+	if( getSubString( this\Contenido, 62,1) in ( "1","2","3","4","5","6","7","8","9") and getSubString( this\Contenido, 61,1 ) in ( "0","1","8","9" ) )
+	then{
+		%Total_AJL:= %Total_AJL + convertToI(getSubString(this\Contenido, 63, 14))
+	}
+};
+%Total_AJK]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Integrator" version="3.7.0" xsi:noNamespaceSchemaLocation="Component.xsd">
+   <Object date="2024-06-04T16:30:32.000Z" name="Notificacion" oid="a91daccd-1073-4c31-9ac1-880c96b27f33" path="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="BusinessDocument" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="Movement" oid="2fda2dca-560f-4157-817f-52b4a8ce9afe" path="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="BusinessDocument" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="InsertMovTBL" oid="9e78dfb3-a96c-416d-b1f8-c156a40967b0" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="CustomFunction" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="GetFlujoByCorrelativo" oid="0a4f50b2-588f-47ea-a707-8b6fee4f825d" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="CustomFunction" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="GetNombreArchivoByCorrelativo" oid="3520b20f-a53c-432a-9504-30082bad7d9f" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="CustomFunction" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="GetCasillaOrigenByCorrelativo" oid="3520b20f-a53c-432a-9504-30082bad7d9f" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="CustomFunction" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="GetCasillaDestinoByCorrelativo" oid="bd166ebc-16c7-42e3-bd64-4f419dc5847b" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="CustomFunction" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="Main_Block_Insert_Movement_Flow1" oid="e032af9f-815a-45ae-b41b-4cb076743e0e" path="MAPSERVICE_InsertMovement_Insert_Movement_Flow::MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="MapBroker" user=""/>
+   <Object date="2024-06-04T16:30:32.000Z" name="Insert_Movement_Flow" oid="eacd2fec-2556-4045-bd20-1ce3a78b05c1" path="MAPSERVICE.InsertMovement" shortDesccription="" timestamp="1717518631550" type="MapStage" user=""/>
+</Component>

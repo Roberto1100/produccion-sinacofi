@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="31/05/2024 15:05:00 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="PA1" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="504571119">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1855361394" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="-709569153" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="-352978166" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="1309664384" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="6" name="IDC" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="-1047572442">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="7" keepDecimalSeparator="true" encodingElement="iso8859" hash="1027852010" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="8" keepDecimalSeparator="true" encodingElement="iso8859" hash="-414565500" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="9" keepDecimalSeparator="true" encodingElement="iso8859" hash="2097080026" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="10" keepDecimalSeparator="true" encodingElement="iso8859" hash="1252030151" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="11" name="IDD" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="-976621349">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="12" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1180239880" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="13" keepDecimalSeparator="true" encodingElement="iso8859" hash="-935261054" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="14" keepDecimalSeparator="true" encodingElement="iso8859" hash="-381571093" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="15" keepDecimalSeparator="true" encodingElement="iso8859" hash="1744489578" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="16" name="IDE" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="1692245962">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="17" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2057027730" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="18" keepDecimalSeparator="true" encodingElement="iso8859" hash="1798859206" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="19" keepDecimalSeparator="true" encodingElement="iso8859" hash="950622056" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="20" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1448937071" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+      <childElement factoryType="FlatFileParent" order="21" name="IDF" parentDelimiterElementValue="0x0a" parentDelimiterElement="2" hash="1052087244">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="3" typeId="10" paddingCharElement=" " name="Linea" paddingPosElement="1" order="22" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1692487018" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="30" typeId="10" paddingCharElement=" " name="ValorCampo" paddingPosElement="1" order="23" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2032347350" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="4" typeId="10" paddingCharElement=" " name="ValorDecimal" paddingPosElement="1" order="24" keepDecimalSeparator="true" encodingElement="iso8859" hash="-2139973609" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="1" typeId="10" paddingCharElement=" " name="SignoCampo" defaultValue="+" paddingPosElement="1" order="25" keepDecimalSeparator="true" encodingElement="iso8859" hash="776693254" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

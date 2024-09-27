@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="e2aa1ebc-b237-4432-9516-c8807af16404">
+   <signature appVersion="3.1.2" lastUpdatedOn="02/02/2024 16:02:25 -0300"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Validacion_y_Error/LOG.bdoc" alias="out"/>
+   <mapElements>
+      <mapElement elementHash="-458577199" elementPath="/Root/Error/">
+         <dmlExpression><![CDATA[%Sinacofi_E04.debug:=getTraces();
+%Sinacofi_E04.debug]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

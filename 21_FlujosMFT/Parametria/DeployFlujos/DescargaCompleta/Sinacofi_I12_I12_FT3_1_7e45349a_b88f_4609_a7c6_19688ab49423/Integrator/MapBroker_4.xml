@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="a98f242e-a9f3-4105-a7a7-c6e8bded1adf" label="" lastModified="2024-05-29T21:12:14.000Z" name="MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12.Main_Block_I12_Salida" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="5a26c413-5426-4534-8607-9d23965d6be1">
+                  <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\ArchivosEntrada.I12_Archivo_Datos</name>
+                  <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in3</Alias>
+            </InputBusinessDocument>
+            <InputBusinessDocument>
+               <BusinessDocument id="fec8e594-9782-4831-af7e-6f7245a4cda4">
+                  <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\ArchivosEntrada.I12_CAR</name>
+                  <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in4</Alias>
+            </InputBusinessDocument>
+            <InputBusinessDocument>
+               <BusinessDocument id="ac9f6858-7478-4b5f-af07-ca8390823f9b">
+                  <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\ArchivosEntrada.I12_Control_Datos</name>
+                  <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in5</Alias>
+            </InputBusinessDocument>
+            <InputBusinessDocument>
+               <BusinessDocument id="4f0d7803-30e5-434d-9c86-44f02c2d13f5">
+                  <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\ArchivosMomentaneos.Auxiliar</name>
+                  <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in6</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepStep>
+               <DmlExpression><![CDATA[%Sinacofi_I12.Destino:= getSubString(in5:\Details\Detalles, 41, 20);
+if %Sinacofi_I12.var_error1 = "" then {
+	%Sinacofi_I12.correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+	%Sinacofi_I12.MovimientoProcesado:=Sinacofi_I12.InsertMovTBL(%Sinacofi_I12.correlativoPrefijo, null , (count(in3:\Contenido ) -1 ), null, "30", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+}]]></DmlExpression>
+            </StepStep>
+            <StepMappingRule>
+               <MappingRule id="53edb52d-f983-43fd-848a-c66140a0bff9" label="" lastModified="2024-08-08T16:49:33.000Z" name="MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12.I12_Generacion_CaratulaSalida:I12_Generacion_CaratulaSalida" xmlVersion="1.0">
+                  <OutputBusinessDocument id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1">
+                     <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\Salida.I12_Caratula_Salida</name>
+                     <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA["001"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA["0000"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="5">
+                     <Expression>
+                        <DmlExpression><![CDATA["+"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="3">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PA1, 5,  index(in4:\Caratula\PA1, "}") - 5), 30, "0")]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="7">
+                     <Expression>
+                        <DmlExpression><![CDATA["002"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="12">
+                     <Expression>
+                        <DmlExpression><![CDATA["003"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="8">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PAV, 5,  index(in4:\Caratula\PAV, "}") - 5), 30, "0")]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="14">
+                     <Expression>
+                        <DmlExpression><![CDATA["0000"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="10">
+                     <Expression>
+                        <DmlExpression><![CDATA["+"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="15">
+                     <Expression>
+                        <DmlExpression><![CDATA["+"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="9">
+                     <Expression>
+                        <DmlExpression><![CDATA["0000"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="13">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringLeft(getSubString(in4:\Caratula\PAW, 5,  index(in4:\Caratula\PAW, "}") - 5), 30, "0")]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepMappingRule>
+               <MappingRule id="1cf3842d-b9d1-428d-a549-fa7fe2a96e2a" label="" lastModified="2024-08-08T16:49:33.000Z" name="MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12.Creacion_Resultado_OK:Creacion_Resultado_OK" xmlVersion="1.0">
+                  <OutputBusinessDocument id="7422d2f4-35a3-4ffb-938f-240200fa7981">
+                     <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\Mensajeria.Resultado</name>
+                     <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="7">
+                     <Expression>
+                        <DmlExpression><![CDATA["FIN_MENSAJE"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA["MENSAJE_RESULTADO"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringRight(getSubString(in5:\Details\Detalles, 1, 20), 20, " ")&"OK"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="5">
+                     <Expression>
+                        <DmlExpression><![CDATA["Generado Satisfactoriamente"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out1</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepMappingRule>
+               <MappingRule id="3f31b90d-951f-41e4-bc66-8df2bd4f307e" label="" lastModified="2024-08-08T16:49:33.000Z" name="MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12.Generar_Aviso:Generar_Aviso" xmlVersion="1.0">
+                  <OutputBusinessDocument id="7422d2f4-35a3-4ffb-938f-240200fa7981">
+                     <name>MAPSERVICE_Sinacofi_I12_I12_FT3::MAPSERVICE.Sinacofi_I12\Mensajeria.Aviso</name>
+                     <lastModified>2024-08-08T16:49:33.000Z</lastModified>
+                  </OutputBusinessDocument>
+                  <MappingElement ElementReferenceId="6">
+                     <Expression>
+                        <DmlExpression><![CDATA["FIN_MENSAJE"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="2">
+                     <Expression>
+                        <DmlExpression><![CDATA["MENSAJE_RESULTADO"]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+                  <MappingElement ElementReferenceId="4">
+                     <Expression>
+                        <DmlExpression><![CDATA[padStringRight(getSubString(in5:\Details\Detalles, 1, 20), 20, " ")&padStringRight(getSubString(in5:\Details\Detalles, 21, 20), 20, " ")]]></DmlExpression>
+                     </Expression>
+                     <Comment/>
+                  </MappingElement>
+               </MappingRule>
+               <StepOutput>
+                  <OutputName>out2</OutputName>
+               </StepOutput>
+            </StepMappingRule>
+            <StepOutput>
+               <OutputName>out3</OutputName>
+               <InputBusinessDocumentAlias>in3</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepOutput>
+               <OutputName>out4</OutputName>
+               <InputBusinessDocumentAlias>in3</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepOutput>
+               <OutputName>out5</OutputName>
+               <InputBusinessDocumentAlias>in4</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepOutput>
+               <OutputName>out6</OutputName>
+               <InputBusinessDocumentAlias>in5</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepOutput>
+               <OutputName>out7</OutputName>
+               <InputBusinessDocumentAlias>in6</InputBusinessDocumentAlias>
+            </StepOutput>
+            <StepStep>
+               <DmlExpression><![CDATA[%Sinacofi_I12.Correlativo:= Sinacofi_I12.Correlativo();
+%Sinacofi_I12.CasillaDestino:= trimString( getSubString(in5:\Details\Detalles, 41, 20) );
+%Sinacofi_I12.CasillaOrigen:= trimString( getSubString(in5:\Details\Detalles, 21, 20) );
+%Sinacofi_I12.CodigoBanco:= getStringRight(GetEntidadByCasilla( %Sinacofi_I12.CasillaOrigen ), 4);
+%Sinacofi_I12.NombreArchivo:= trimString( getSubString(in5:\Details\Detalles, 1, 20) );
+%Sinacofi_I12.nombreSalida:= "I12FT"  + padStringLeft(formatString(%Sinacofi_I12.Correlativo), 5, "0") + "A." + %Sinacofi_I12.CodigoBanco;
+%Sinacofi_I12.correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%Sinacofi_I12.MovimientoProcesado:=Sinacofi_I12.InsertMovTBL(%Sinacofi_I12.correlativoPrefijo, %Sinacofi_I12.nombreSalida , null, %Sinacofi_I12.CasillaDestino, "40", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"));
+setDocumentAttributeToOutput( "out", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_" + "I12FT" + padStringLeft(formatString(%Sinacofi_I12.Correlativo), 5, "0") + "C." + %Sinacofi_I12.CodigoBanco);
+setDocumentAttributeToOutput( "out3", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_" + "I12FT" + padStringLeft(formatString(%Sinacofi_I12.Correlativo), 5, "0") + "A." + %Sinacofi_I12.CodigoBanco);
+setDocumentAttributeToOutput( "out1", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaOrigen + "_" + %Sinacofi_I12.NombreArchivo + ".RES");
+setDocumentAttributeToOutput( "out2", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_"+ %Sinacofi_I12.NombreArchivo + ".AVI" );
+setDocumentAttributeToOutput( "out6", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_"  + trimString(%Sinacofi_I12.NombreArchivo) + ".CTR");
+setDocumentAttributeToOutput( "out4", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_" + %Sinacofi_I12.NombreArchivo);
+setDocumentAttributeToOutput( "out5", "B2BXGISend_ProductionFilename", %Sinacofi_I12.correlativoPrefijo + "_" + %Sinacofi_I12.CasillaDestino + "_" + %Sinacofi_I12.NombreArchivo + ".CAR")]]></DmlExpression>
+            </StepStep>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

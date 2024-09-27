@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="5715a7a3-8318-409a-bdb7-dafe6c718a8f" label="" lastModified="2024-07-11T18:58:38.000Z" name="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Main_Block_AgregarDestino1" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="026b5e53-1be7-4ad4-943c-b668418a4de6">
+                  <name>MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.DestinoEntrada</name>
+                  <lastModified>2024-07-11T18:59:01.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in1</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepParse>
+               <DmlExpression><![CDATA[convertToV(GetCaratulaByCorrelativo(in1:\Datos\Correlativo)&"\n")]]></DmlExpression>
+               <BusinessDocument id="766be135-fdc7-49ea-abcd-485aeffc11d7">
+                  <name>MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1.Salida</name>
+                  <lastModified>2024-07-11T18:59:01.000Z</lastModified>
+               </BusinessDocument>
+               <StepOutput>
+                  <OutputName>out</OutputName>
+               </StepOutput>
+            </StepParse>
+            <StepStep>
+               <DmlExpression><![CDATA[%tipoDocumento:=GetTDbyCorrelativo(in1:\Datos\Correlativo); 
+%largoCodigoSalida:=convertToI(GetLargoCodByCorr(in1:\Datos\Correlativo)); 
+%correlativoSalida:=padStringLeft(in1:\Datos\Correlativo_Salida, 4, "0"); 
+%casillaOrigen:=GetCodInstByCorrelativo(in1:\Datos\Correlativo);
+%codCasillaDest:=trimString(in1:\Datos\Casilla_Destino);
+%codInstFinal:=getStringRight(%casillaOrigen,%largoCodigoSalida); 
+%nombreArchDatos:=%tipoDocumento + in1:\Datos\Correlativo_Salida +"a." + %codInstFinal;
+%nombreArchCarat:=%tipoDocumento + in1:\Datos\Correlativo_Salida +"c." + %codInstFinal;
+setDocumentAttributeToOutput( "out",  "B2BXGISend_ProductionFilename", in1:\Datos\Correlativo  + "_" +  %codCasillaDest + "_"  + %nombreArchDatos + "_" + %nombreArchCarat);
+%mov:=InsertMovTBL(  
+	 in1:\Datos\Correlativo, 
+	%nombreArchDatos, 
+	null, 
+	null, 
+	"40", 
+	formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+)]]></DmlExpression>
+            </StepStep>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>

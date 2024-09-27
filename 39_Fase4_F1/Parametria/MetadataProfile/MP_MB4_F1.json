@@ -1,0 +1,46 @@
+{
+  "username" : "malvarez",
+  "timestamp" : 1727216657787,
+  "objtype" : "metadata-profiles",
+  "encryptPassword" : true,
+  "userExportedData" : false,
+  "content" : {
+  "enabled" : true,
+  "service" : "Service_MB4_F1",
+  "outputs" : [ {
+    "@class" : "DeliverToApplication",
+    "outputName" : "Backup",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  }, {
+    "@class" : "DeliverToApplication",
+    "outputName" : "Salida",
+    "applicationDelivery" : {
+      "community" : "FT3",
+      "routingId" : "FT3"
+    }
+  } ],
+  "criteria" : [ {
+    "metadata" : "Trading Engine: PickupName",
+    "condition" : "EQUALS",
+    "value" : "Inbound_Web_F1"
+  }, {
+    "metadata" : "Trading Engine: ConsumptionFilename",
+    "condition" : "STARTS_WITH",
+    "value" : "MB4"
+  } ],
+  "attributes" : [ ],
+  "@links" : {
+    "service" : [ {
+      "href" : "/api/v2/services/Service_MB4_F1"
+    } ],
+    "communities" : [ {
+      "href" : "/api/v2/communities/FT3"
+    } ]
+  },
+  "@id" : "4646509",
+  "@name" : "MP_MB4_F1"
+}
+}

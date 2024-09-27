@@ -1,0 +1,25 @@
+{
+  "username" : "lalcayaga",
+  "timestamp" : 1725657505643,
+  "objtype" : "metadata-profiles",
+  "encryptPassword" : true,
+  "userExportedData" : false,
+  "content" : {
+  "enabled" : true,
+  "service" : "Service_AUX",
+  "outputs" : [ ],
+  "criteria" : [ {
+    "metadata" : "Integration Engine: Pickup Name",
+    "condition" : "EQUALS",
+    "value" : "Aux_Salida"
+  } ],
+  "attributes" : [ ],
+  "@links" : {
+    "service" : [ {
+      "href" : "/api/v2/services/Service_AUX"
+    } ]
+  },
+  "@id" : "783001",
+  "@name" : "MP_AUX"
+}
+}

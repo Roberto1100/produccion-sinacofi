@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="16/08/2024 15:40:48 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D26_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D26_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1695292856" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1169139623" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1469098293" elementPath="/Datos/LSH/">
+         <dmlExpression><![CDATA[%Total_CFM:=0;
+%Total_CFO:= 0;
+%Total_CFP:= 0;
+loop on \Details  {
+	%Total_CFM:= %Total_CFM + convertToI(getSubString(this\Contenido, 189, 14));
+	%Total_CFO:= %Total_CFO + convertToI(getSubString(this\Contenido, 203, 14))+ convertToI(getSubString(this\Contenido, 217, 14)) + convertToI(getSubString(this\Contenido, 231, 14)) + convertToI(getSubString(this\Contenido, 245, 14)) + convertToI(getSubString(this\Contenido, 259, 14)) + convertToI(getSubString(this\Contenido, 273, 14)) + convertToI(getSubString(this\Contenido, 287, 14)) + convertToI(getSubString(this\Contenido, 301, 14)) + convertToI(getSubString(this\Contenido, 315, 14));
+	%Total_CFP:= %Total_CFP + convertToI(getSubString(this\Contenido, 329, 14))+ convertToI(getSubString(this\Contenido, 343, 14))
+};
+%Total_CFM
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="897165447" elementPath="/Datos/LSJ/">
+         <dmlExpression><![CDATA[%Total_CFP]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/CFO/">
+         <dmlExpression><![CDATA[%Total_CFO]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

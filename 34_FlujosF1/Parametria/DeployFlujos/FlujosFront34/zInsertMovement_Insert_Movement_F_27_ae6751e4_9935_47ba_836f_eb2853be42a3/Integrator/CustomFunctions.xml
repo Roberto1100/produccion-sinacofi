@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CustomFunctions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CustomFunctions.xsd">
+   <CustomFunction dmlCompatibility="2.1" id="9e78dfb3-a96c-416d-b1f8-c156a40967b0" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.InsertMovTBL" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+         <Param DmlClassName="String" label="label param1" name="archivoSalida"/>
+         <Param DmlClassName="Integer" label="label param2" name="registros"/>
+         <Param DmlClassName="String" label="label param3" name="destino"/>
+         <Param DmlClassName="String" label="label param4" name="estado"/>
+         <Param DmlClassName="String" label="label param5" name="fecha"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+select FUNC_CARGAMOVIMIENTO (#correlativo#, #archivoSalida#, #registros#,#destino#,#estado#,#fecha#)  from dual</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="0a4f50b2-588f-47ea-a707-8b6fee4f825d" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetFlujoByCorrelativo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_OBTENER_FLUJO_BY_CORR(#correlativo#) FROM DUAL</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="3520b20f-a53c-432a-9504-30082bad7d9f" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetNombreArchivoByCorrelativo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_OBTENER_NOMBRE_ENTRADA(#correlativo#) FROM DUAL</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="3520b20f-a53c-432a-9504-30082bad7d9f" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaOrigenByCorrelativo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="label param0" name="correlativo"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_OBTENER_CASILLA_BY_CORR(#correlativo#) FROM DUAL</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+   <CustomFunction dmlCompatibility="2.1" id="bd166ebc-16c7-42e3-bd64-4f419dc5847b" label="" lastModified="2024-06-04T16:30:32.000Z" name="MAPSERVICE.InsertMovement.GetCasillaDestinoByCorrelativo" xmlVersion="1.0">
+      <DmlClassName>String</DmlClassName>
+      <Parameters>
+         <Param DmlClassName="String" label="correlativo de traza" name="correlativo"/>
+      </Parameters>
+      <JdbcCustomFunction>
+         <JDBCExpression>/*To test te connection use this querries.*/
+/* for MySQL/PostgreSQL use: select 1*/
+/*for Oracle use: select 1 from dual */
+/*for DB2 use: select 1 from sysibm.sysdummy1*/
+SELECT FUNC_OBTENER_CAS_DEST_BY_CORR(#correlativo#) FROM DUAL</JDBCExpression>
+      </JdbcCustomFunction>
+   </CustomFunction>
+</CustomFunctions>

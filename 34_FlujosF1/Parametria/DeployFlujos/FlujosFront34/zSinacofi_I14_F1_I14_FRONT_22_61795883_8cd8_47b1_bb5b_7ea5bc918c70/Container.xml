@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="61795883-8cd8-47b1-bb5b-7ea5bc918c70" name="Sinacofi_I14_F1_I14_FRONT" version="22" xsi:noNamespaceSchemaLocation="Container.xsd">
+   <longDescription>    </longDescription>
+   <generatedBy/>
+   <generationDate>2024-09-02T21:29:33.000Z</generationDate>
+   <shortDescription/>
+   <Contents>
+      <Product name="Integrator" version="3.7.0"/>
+      <Product name="MapDesigner" version="2.5.0"/>
+   </Contents>
+</Container>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="0516c165-3702-4f3d-9d96-de3dbd5f82ec">
+   <signature appVersion="3.1.2" lastUpdatedOn="13/05/2024 12:47:43 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D61_CAR.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosMomentaneos/D61_CAR_Val.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-35716921" elementPath="/Caratula/ORG/">
+         <dmlExpression><![CDATA[in:\Caratula\ORG]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2079305211" elementPath="/Caratula/NMS/">
+         <dmlExpression><![CDATA[in:\Caratula\NMS]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1086846777" elementPath="/Caratula/IDU/">
+         <dmlExpression><![CDATA[in:\Caratula\IDU]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1828726761" elementPath="/Caratula/FGB/">
+         <dmlExpression><![CDATA[in:\Caratula\FGB]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-731462469" elementPath="/Caratula/HGB/">
+         <dmlExpression><![CDATA[in:\Caratula\HGB]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="828365651" elementPath="/Caratula/MSG/">
+         <dmlExpression><![CDATA[in:\Caratula\MSG]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-599667270" elementPath="/Caratula/PRI/">
+         <dmlExpression><![CDATA[in:\Caratula\PRI]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2021002280" elementPath="/Caratula/TID/">
+         <dmlExpression><![CDATA[in:\Caratula\TID]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="209429736" elementPath="/Caratula/NSE/">
+         <dmlExpression><![CDATA[in:\Caratula\NSE]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1381671427" elementPath="/Caratula/FEN/">
+         <dmlExpression><![CDATA[in:\Caratula\FEN]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="105274039" elementPath="/Caratula/HEN/">
+         <dmlExpression><![CDATA[in:\Caratula\HEN]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="2141034480" elementPath="/Caratula/G01/">
+         <dmlExpression><![CDATA[in:\Caratula\G01]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="705802243" elementPath="/Caratula/20/">
+         <dmlExpression><![CDATA[in:\Caratula\!20!]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1695395307" elementPath="/Caratula/34/">
+         <dmlExpression><![CDATA[in:\Caratula\!34!]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="182892613" elementPath="/Caratula/79/">
+         <dmlExpression><![CDATA[in:\Caratula\!79!]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="15206579" elementPath="/Caratula/FIN/">
+         <dmlExpression><![CDATA[in:\Caratula\FIN]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="646243282" elementPath="/Caratula/18/">
+         <dmlExpression><![CDATA[in:\Caratula\!18!]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-418581124" elementPath="/Caratula/PAR/">
+         <dmlExpression><![CDATA[in:\Caratula\PA1]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

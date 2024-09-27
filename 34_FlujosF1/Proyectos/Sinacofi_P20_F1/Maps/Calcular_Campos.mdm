@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 16:18:14 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P20_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P20_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count( \Details )
+]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%comunasConcatenadas:= "|";
+%totalPBC:=0;
+%totalPBD:=0;
+%totalPBE:=0;
+loop on \Details {
+	if ( countString( %comunasConcatenadas, "|" & getSubString( this\Contenido, 4, 6 ) & "|" ) = 0 ) then {
+		%comunasConcatenadas:= %comunasConcatenadas & getSubString( this\Contenido, 4, 6 ) & "|"
+  	};
+  	if (  getSubString( this\Contenido, 10, 2 ) in ( "11", "12", "13", "14", "19" ) ) then {
+  		%totalPBC:=%totalPBC + convertToI( getSubString( this\Contenido, 12, 9 ) )
+  	};
+  	if (  getSubString( this\Contenido, 10, 2 ) in ( "21", "22", "23", "24" ) ) then {
+  		%totalPBD:=%totalPBD + convertToI( getSubString( this\Contenido, 12, 9 ) )
+  	};
+  	if (  getSubString( this\Contenido, 10, 2 ) in ( "31", "32", "33", "34" ) ) then {
+  		%totalPBE:=%totalPBE + convertToI( getSubString( this\Contenido, 12, 9 ) )
+  	}
+};
+%comunasDistintas:= countString( %comunasConcatenadas, "|" ) -1 ;
+%comunasDistintas]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%totalPBD]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[%totalPBE]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/PB6/">
+         <dmlExpression><![CDATA[%totalPBC]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-717474999" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 14:07:25 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/I11_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/I11_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%Total_AP1:= 0;
+loop on \Details {
+	if (getSubString(this\Contenido,1,2) = "01" ) then {
+		%Total_AP1:= %Total_AP1 + convertToI(getSubString(this\Contenido, 97, 2)) 
+	}
+};
+ %Total_AP1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1945840105" elementPath="/Datos/AJC/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString( item\Contenido,1,2)= "02"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-30107372" elementPath="/Datos/AP4/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString( item\Contenido,1,2)= "03"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1889161874" elementPath="/Datos/APG/">
+         <dmlExpression><![CDATA[count(\Details[where getSubString( item\Contenido,1,2)= "01"])]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos, 8,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

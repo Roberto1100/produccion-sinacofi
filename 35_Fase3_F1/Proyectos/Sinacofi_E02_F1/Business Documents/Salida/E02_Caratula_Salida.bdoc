@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<businessDocument xmlns="http://www.axway.com/mappingServices/flatFileBusinessDocument" keepInputNumberFractionDigits="true" encodingBD="iso8859" keepDecimalSeparator="true" id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1" keepDecimalSeparatorCharacter="true" keepInputNumberDateDigits="true">
+   <signature appVersion="3.1.2" lastUpdatedOn="30/05/2024 11:23:08 -0400"/>
+   <childElements>
+      <childElement factoryType="FlatFileParent" order="1" name="Datos" hash="-1311734049">
+         <cardinality minimum="1" maximum="1"/>
+         <childElements>
+            <childElement factoryType="FlatFileLeaf" definition="6" typeId="10" paddingCharElement=" " name="34" paddingPosElement="1" order="2" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1092621081" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="15" typeId="10" paddingCharElement=" " name="EE1" paddingPosElement="1" order="3" keepDecimalSeparator="true" encodingElement="iso8859" hash="1798799486" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="EF0" paddingPosElement="1" order="4" keepDecimalSeparator="true" encodingElement="iso8859" hash="1953989469" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="EF1" paddingPosElement="1" order="5" keepDecimalSeparator="true" encodingElement="iso8859" hash="-914928435" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="EF2" paddingPosElement="1" order="6" keepDecimalSeparator="true" encodingElement="iso8859" hash="823981968" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="EF3" paddingPosElement="1" order="7" keepDecimalSeparator="true" encodingElement="iso8859" hash="-1474086366" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+            <childElement factoryType="FlatFileLeaf" definition="19" typeId="10" paddingCharElement=" " name="EF4" paddingPosElement="1" order="8" keepDecimalSeparator="true" encodingElement="iso8859" hash="1549492559" allowDistortion="true">
+               <cardinality minimum="1" maximum="1"/>
+            </childElement>
+         </childElements>
+      </childElement>
+   </childElements>
+</businessDocument>

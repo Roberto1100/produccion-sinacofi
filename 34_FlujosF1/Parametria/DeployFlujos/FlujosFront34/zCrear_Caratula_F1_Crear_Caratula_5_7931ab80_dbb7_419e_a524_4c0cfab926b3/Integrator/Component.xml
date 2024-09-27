@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Integrator" version="3.7.0" xsi:noNamespaceSchemaLocation="Component.xsd">
+   <Object date="2024-07-11T18:59:01.000Z" name="DestinoEntrada" oid="026b5e53-1be7-4ad4-943c-b668418a4de6" path="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="BusinessDocument" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="Salida" oid="766be135-fdc7-49ea-abcd-485aeffc11d7" path="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="BusinessDocument" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="GetCaratulaByCorrelativo" oid="71b7a381-036f-454a-a745-207e3ec61820" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="GetTDbyCorrelativo" oid="6cc1cb1b-3c48-4370-8dd6-5293d416ea7f" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="GetLargoCodByCorr" oid="8bee38bf-4e71-47c5-9b7c-9ee64726466f" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="GetCodInstByCorrelativo" oid="98cfb4c6-09ea-4b7c-ac4c-29984ba74f49" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="InsertMovTBL" oid="9e78dfb3-a96c-416d-b1f8-c156a40967b0" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="InsertErrorTBL" oid="53671eb6-d536-4a07-b926-d740272e8aa4" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="CustomFunction" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="Main_Block_AgregarDestino1" oid="5715a7a3-8318-409a-bdb7-dafe6c718a8f" path="MAPSERVICE_Crear_Caratula_F1_Crear_Caratula_F1::MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="MapBroker" user=""/>
+   <Object date="2024-07-11T18:59:01.000Z" name="Crear_Caratula_F1" oid="61d48dc0-c270-4023-97a8-09f35bf50862" path="MAPSERVICE.Crear_Caratula_F1" shortDesccription="" timestamp="1720724340815" type="MapStage" user=""/>
+</Component>

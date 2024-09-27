@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="07/06/2024 12:58:33 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/D41_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/D41_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/Datos/PA1/">
+         <dmlExpression><![CDATA[count(\Details) ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="962302456" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString(in:\Header\Datos,7,6 )]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/AHX/">
+         <dmlExpression><![CDATA[%totalAHX:=0;
+%totalAHY:=0;
+%totalAHZ:=0;
+loop on \Details {
+  	%totalAHX:=%totalAHX+convertToI( getSubString( this\Contenido, 54, 14 ));
+  	%totalAHY:=%totalAHY+convertToI( getSubString( this\Contenido, 71, 14 ));
+  	%totalAHZ:=%totalAHZ+convertToI( getSubString( this\Contenido, 113, 14 ))
+    	};
+  %totalAHX]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/AHY/">
+         <dmlExpression><![CDATA[%totalAHY]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="651319015" elementPath="/Datos/AHZ/">
+         <dmlExpression><![CDATA[%totalAHZ ]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

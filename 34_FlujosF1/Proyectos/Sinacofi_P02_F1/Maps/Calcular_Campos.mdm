@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns="http://www.axway.com/mappingServices/map" id="1cb16b97-c668-4742-bf9c-e7da78efdc15">
+   <signature appVersion="3.1.2" lastUpdatedOn="29/05/2024 12:38:05 -0400"/>
+   <outputBusinessDocument businessDocument="~/Business Documents/Salida/P02_Caratula_Salida.bdoc" alias="out"/>
+   <inputBusinessDocuments>
+      <inputBusinessDocument businessDocument="~/Business Documents/ArchivosEntrada/P02_Archivo_Datos.bdoc" alias="in"/>
+   </inputBusinessDocuments>
+   <mapElements>
+      <mapElement elementHash="-1092621081" elementPath="/ID1/ID1/">
+         <dmlExpression><![CDATA[count(\Details)]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1953989469" elementPath="/Datos/ID7/">
+         <dmlExpression><![CDATA[%total_PB1:= 0;
+%total_PB2:= 0;
+%total_PB3:= 0;
+%comunasConcatenadas:="|";
+loop on \Details {
+	if ( countString( %comunasConcatenadas, "|"&getSubString( this\Contenido, 4, 6)&"|" ) =0 )
+	then {
+		%comunasConcatenadas:=%comunasConcatenadas&getSubString(this\Contenido, 4, 6)&"|"
+	};
+	%total_PB1:= %total_PB1 + convertToI(getSubString(this\Contenido, 14, 5));
+	%total_PB2:= %total_PB2 + convertToI(getSubString(this\Contenido, 19, 5));
+	%total_PB3:= %total_PB3 + convertToI(getSubString(this\Contenido, 24, 6))
+};
+countString(%comunasConcatenadas, "|") -1 ]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-914928435" elementPath="/Datos/ID8/">
+         <dmlExpression><![CDATA[%total_PB1]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-32537263" elementPath="/Datos/ID9/">
+         <dmlExpression><![CDATA[%total_PB2]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="1298057697" elementPath="/Datos/IDA/">
+         <dmlExpression><![CDATA[%total_PB3]]></dmlExpression>
+      </mapElement>
+      <mapElement elementHash="-354864437" elementPath="/Datos/34/">
+         <dmlExpression><![CDATA[getSubString( \Header\Datos , 7,6 )]]></dmlExpression>
+      </mapElement>
+   </mapElements>
+</map>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MapBrokers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MapBrokers_2.xsd">
+   <MapBroker dmlCompatibility="2.1" id="4015b54a-c649-4e47-b9f7-d41e3e8b10e8" label="" lastModified="2024-07-10T18:51:10.000Z" name="MAPSERVICE_Sinacofi_D10_F1_D10_FRONT::MAPSERVICE.Sinacofi_D10_F1.Insertar_Campos" xmlVersion="1.0">
+      <DmlMapBroker>
+         <InputBusinessDocuments>
+            <InputBusinessDocument>
+               <BusinessDocument id="29b6fc93-a3f5-4ed1-bd2a-a3828141c0b1">
+                  <name>MAPSERVICE_Sinacofi_D10_F1_D10_FRONT::MAPSERVICE.Sinacofi_D10_F1\Salida.D10_Caratula_Salida</name>
+                  <lastModified>2024-08-30T13:25:44.000Z</lastModified>
+               </BusinessDocument>
+               <Alias>in1</Alias>
+            </InputBusinessDocument>
+         </InputBusinessDocuments>
+         <DecisionPath>
+            <StepStep>
+               <DmlExpression><![CDATA[%correlativoPrefijo:= getSubString(getAttribute( "B2BXGIReceive_ConsumptionFilename" ), 5, 8 );
+%resEstructuraValida:= ValidarEstructuraCAR( %correlativoPrefijo, "PA1|CGP|CGQ|CGS|CGT|CGV|CGW|CGX|CGY|CGZ|CIA|CIB|CIC|CID|CHW|CHY" );
+if( %resEstructuraValida = "NK" )then{
+	%var_error1:= InsertErrorTBL(
+		%correlativoPrefijo,
+		"000", 
+		"Estructura de caratula ha sido modificada",
+		formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss")
+	);
+	%var_error1:= InsertMovTBL(%correlativoPrefijo, null, %var_registro1, null, "00", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"))
+}else{
+	%ValoresConcatenados:= in1:\Datos\!34! & "|" & in1:\Datos\PA1 
+	& "|" & in1:\Datos\CGP
+	& "|" & in1:\Datos\CGQ
+	& "|" & in1:\Datos\CGS
+	& "|" & in1:\Datos\CGT
+	& "|" & in1:\Datos\CGV
+	& "|" & in1:\Datos\CGW
+	& "|" & in1:\Datos\CGX
+	& "|" & in1:\Datos\CGY
+	& "|" & in1:\Datos\CGZ
+	& "|" & in1:\Datos\CIA
+	& "|" & in1:\Datos\CIB
+	& "|" & in1:\Datos\CIC
+	& "|" & in1:\Datos\CID
+	& "|" & in1:\Datos\CHW
+	& "|" & in1:\Datos\CHY;
+	%MovimientoProcesado:=InsertMovTBL(%correlativoPrefijo, null , null, null, "34", formatString(getDateAndTime(), "CCYY'-'MM'-'DD hh':'mm':'ss"));
+	%resCargarCampos:= CargarCampos( %correlativoPrefijo , %ValoresConcatenados )
+}]]></DmlExpression>
+            </StepStep>
+            <StepExit/>
+         </DecisionPath>
+      </DmlMapBroker>
+   </MapBroker>
+</MapBrokers>
