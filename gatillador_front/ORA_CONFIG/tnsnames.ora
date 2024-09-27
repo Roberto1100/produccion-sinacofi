@@ -1,0 +1,18 @@
+Desarrollo =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 100.66.55.13)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = C1DVAXDB_MFT.sncldevdbsrv02.privatedev.oraclevcn.com)
+    )
+  )
+
+Certificacion =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 100.66.39.10)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = C1QAAXDB_MFT.snclqadbsrv02.privateqa.oraclevcn.com)
+    )
+  )
+
