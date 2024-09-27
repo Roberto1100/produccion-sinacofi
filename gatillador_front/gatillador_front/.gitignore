@@ -1,0 +1,4 @@
+Directorios
+.vscode/launch.json
+__pycache__
+src\config\directories.py

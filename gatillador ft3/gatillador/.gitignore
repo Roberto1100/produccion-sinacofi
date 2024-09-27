@@ -1,0 +1,13 @@
+/xml_files
+/test
+/processed_files
+/logs
+/res
+test.py
+v1.zip
+count_lines.py
+__pycache__/
+/files_directory
+.vscode
+utils/constants.py
+/Directorio
